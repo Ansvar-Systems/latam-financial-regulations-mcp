@@ -24,7 +24,6 @@ interface SourceFreshness {
 export async function checkDataFreshness(
   db: Database,
 ): Promise<ReturnType<typeof withMeta>> {
-  const startMs = Date.now();
 
   const sql = `
     SELECT
@@ -96,6 +95,5 @@ export async function checkDataFreshness(
       })),
       sources: freshness,
     },
-    startMs,
   );
 }

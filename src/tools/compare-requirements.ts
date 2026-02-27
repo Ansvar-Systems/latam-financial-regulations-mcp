@@ -28,17 +28,15 @@ export async function compareRequirements(
   db: Database,
   args: CompareRequirementsArgs,
 ): Promise<ReturnType<typeof withMeta>> {
-  const startMs = Date.now();
 
   if (!args.countries || !Array.isArray(args.countries) || args.countries.length < 2) {
     return withMeta(
       { error: 'countries must be an array with at least 2 country codes', comparison: {} },
-      startMs,
     );
   }
 
   if (!args.topic || args.topic.trim().length === 0) {
-    return withMeta({ error: 'topic parameter is required', comparison: {} }, startMs);
+    return withMeta({ error: 'topic parameter is required', comparison: {} });
   }
 
   const invalidCodes = args.countries.filter((c) => !validateCountryCode(c));
@@ -48,7 +46,6 @@ export async function compareRequirements(
         error: `Invalid country codes: ${invalidCodes.join(', ')}. Use BR, CL, CO, UY, MX, or PE.`,
         comparison: {},
       },
-      startMs,
     );
   }
 
@@ -65,7 +62,6 @@ export async function compareRequirements(
         comparison: {},
         message: 'Topic is empty or contains only special characters.',
       },
-      startMs,
     );
   }
 
@@ -107,6 +103,5 @@ export async function compareRequirements(
       total_results: totalResults,
       comparison,
     },
-    startMs,
   );
 }

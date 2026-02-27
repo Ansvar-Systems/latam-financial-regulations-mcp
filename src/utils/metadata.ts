@@ -1,48 +1,43 @@
-/**
- * Response metadata generator for LATAM Financial Regulations MCP.
- *
- * Every tool response includes _meta with provenance, disclaimer, and timing.
- */
-
-export interface ResponseMeta {
+export interface ResponseMetadata {
+  disclaimer: string;
+  data_freshness: {
+    last_ingested: string;
+    staleness_warning: string | null;
+  };
+  source_authority: string;
+  ai_disclosure: string;
   server: string;
   version: string;
-  disclaimer: string;
-  timestamp: string;
-  query_ms?: number;
 }
 
-const DISCLAIMER =
-  'This data is provided for informational purposes only and does not constitute ' +
-  'financial, legal, or regulatory advice. Regulations may have been amended after ' +
-  'the last data update. Always verify with the official regulator publication and ' +
-  'consult qualified legal or compliance professionals before making decisions.';
+const STALE_THRESHOLD_DAYS = 90;
 
-const SERVER_NAME = 'latam-financial-regulations-mcp';
-const VERSION = '0.1.0';
+export function buildMeta(): ResponseMetadata {
+  const lastIngested = '2026-02-27';
+  const daysSince = Math.floor(
+    (Date.now() - new Date(lastIngested).getTime()) / (1000 * 60 * 60 * 24)
+  );
 
-/**
- * Build a _meta object to attach to every tool response.
- */
-export function buildMeta(startMs?: number): ResponseMeta {
-  const meta: ResponseMeta = {
-    server: SERVER_NAME,
-    version: VERSION,
-    disclaimer: DISCLAIMER,
-    timestamp: new Date().toISOString(),
+  return {
+    disclaimer: 'Reference tool only. Not legal advice. Verify against official gazettes and consult qualified legal counsel.',
+    data_freshness: {
+      last_ingested: lastIngested,
+      staleness_warning: daysSince > STALE_THRESHOLD_DAYS
+        ? `Data is ${daysSince} days old. Re-run ingestion to refresh.`
+        : null,
+    },
+    source_authority: 'Financial regulatory authorities: BACEN, CVM, SUSEP, CMF, SFC, BCU, CNBV, SBS',
+    ai_disclosure: 'This data is served by an MCP server for AI assistant consumption. Always verify citations against primary sources.',
+    server: 'latam-financial-regulations-mcp',
+    version: '0.1.0',
   };
-  if (startMs !== undefined) {
-    meta.query_ms = Date.now() - startMs;
-  }
-  return meta;
 }
 
 /**
- * Wrap a tool result with _meta.
+ * Wrap a tool result with _metadata.
  */
 export function withMeta<T extends Record<string, unknown>>(
   result: T,
-  startMs?: number,
-): T & { _meta: ResponseMeta } {
-  return { ...result, _meta: buildMeta(startMs) };
+): T & { _metadata: ResponseMetadata } {
+  return { ...result, _metadata: buildMeta() };
 }

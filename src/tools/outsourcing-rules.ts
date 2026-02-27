@@ -25,16 +25,14 @@ export async function getOutsourcingRules(
   db: Database,
   args: OutsourcingRulesArgs,
 ): Promise<ReturnType<typeof withMeta>> {
-  const startMs = Date.now();
 
   if (!args.country) {
-    return withMeta({ error: 'country parameter is required', rules: [] }, startMs);
+    return withMeta({ error: 'country parameter is required', rules: [] });
   }
 
   if (!validateCountryCode(args.country)) {
     return withMeta(
       { error: `Invalid country code: ${args.country}. Use BR, CL, CO, UY, MX, or PE.`, rules: [] },
-      startMs,
     );
   }
 
@@ -64,6 +62,5 @@ export async function getOutsourcingRules(
       total: rows.length,
       rules: rows,
     },
-    startMs,
   );
 }

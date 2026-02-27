@@ -30,19 +30,16 @@ export async function getProvision(
   db: Database,
   args: GetProvisionArgs,
 ): Promise<ReturnType<typeof withMeta>> {
-  const startMs = Date.now();
 
   if (!args.country || !args.regulation_id || !args.article) {
     return withMeta(
       { error: 'country, regulation_id, and article are all required parameters', provision: null },
-      startMs,
     );
   }
 
   if (!validateCountryCode(args.country)) {
     return withMeta(
       { error: `Invalid country code: ${args.country}. Use BR, CL, CO, UY, MX, or PE.`, provision: null },
-      startMs,
     );
   }
 
@@ -79,9 +76,8 @@ export async function getProvision(
         error: `No provision found for ${args.country.toUpperCase()} / ${args.regulation_id} / ${args.article}`,
         provision: null,
       },
-      startMs,
     );
   }
 
-  return withMeta({ provision: row }, startMs);
+  return withMeta({ provision: row });
 }

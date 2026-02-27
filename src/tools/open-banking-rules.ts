@@ -26,16 +26,14 @@ export async function getOpenBankingRules(
   db: Database,
   args: OpenBankingRulesArgs,
 ): Promise<ReturnType<typeof withMeta>> {
-  const startMs = Date.now();
 
   if (!args.country) {
-    return withMeta({ error: 'country parameter is required', rules: [] }, startMs);
+    return withMeta({ error: 'country parameter is required', rules: [] });
   }
 
   if (!validateCountryCode(args.country)) {
     return withMeta(
       { error: `Invalid country code: ${args.country}. Use BR, CL, CO, UY, MX, or PE.`, rules: [] },
-      startMs,
     );
   }
 
@@ -66,6 +64,5 @@ export async function getOpenBankingRules(
       total: rows.length,
       rules: rows,
     },
-    startMs,
   );
 }

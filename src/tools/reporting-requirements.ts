@@ -27,16 +27,14 @@ export async function getReportingRequirements(
   db: Database,
   args: ReportingRequirementsArgs,
 ): Promise<ReturnType<typeof withMeta>> {
-  const startMs = Date.now();
 
   if (!args.country) {
-    return withMeta({ error: 'country parameter is required', requirements: [] }, startMs);
+    return withMeta({ error: 'country parameter is required', requirements: [] });
   }
 
   if (!validateCountryCode(args.country)) {
     return withMeta(
       { error: `Invalid country code: ${args.country}. Use BR, CL, CO, UY, MX, or PE.`, requirements: [] },
-      startMs,
     );
   }
 
@@ -78,6 +76,5 @@ export async function getReportingRequirements(
       total: rows.length,
       requirements: rows,
     },
-    startMs,
   );
 }

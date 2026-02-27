@@ -30,18 +30,17 @@ export async function searchRegulations(
   db: Database,
   args: SearchRegulationsArgs,
 ): Promise<ReturnType<typeof withMeta>> {
-  const startMs = Date.now();
 
   if (!args.query || args.query.trim().length === 0) {
-    return withMeta({ error: 'query parameter is required', results: [] }, startMs);
+    return withMeta({ error: 'query parameter is required', results: [] });
   }
 
   if (args.country && !validateCountryCode(args.country)) {
-    return withMeta({ error: `Invalid country code: ${args.country}. Use BR, CL, CO, UY, MX, or PE.`, results: [] }, startMs);
+    return withMeta({ error: `Invalid country code: ${args.country}. Use BR, CL, CO, UY, MX, or PE.`, results: [] });
   }
 
   if (args.sector && !validateSector(args.sector)) {
-    return withMeta({ error: `Invalid sector: ${args.sector}. Use banking, securities, insurance, fintech, or open_finance.`, results: [] }, startMs);
+    return withMeta({ error: `Invalid sector: ${args.sector}. Use banking, securities, insurance, fintech, or open_finance.`, results: [] });
   }
 
   const limit = clampLimit(args.limit);
@@ -56,7 +55,6 @@ export async function searchRegulations(
         results: [],
         message: 'Query is empty or contains only special characters.',
       },
-      startMs,
     );
   }
 
@@ -105,6 +103,5 @@ export async function searchRegulations(
       total: rows.length,
       results: rows,
     },
-    startMs,
   );
 }

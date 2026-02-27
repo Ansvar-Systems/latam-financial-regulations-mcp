@@ -9,7 +9,6 @@ import { withMeta } from '../utils/metadata.js';
 export async function about(
   db: Database,
 ): Promise<ReturnType<typeof withMeta>> {
-  const startMs = Date.now();
 
   const regulatorsCount = db.prepare('SELECT COUNT(*) AS cnt FROM regulators').get() as { cnt: number };
   const regulationsCount = db.prepare('SELECT COUNT(*) AS cnt FROM regulations').get() as { cnt: number };
@@ -73,6 +72,5 @@ export async function about(
         'SUSEP (susep.gov.br), CMF (cmfchile.cl), SFC (superfinanciera.gov.co), ' +
         'BCU (bcu.gub.uy), CNBV (cnbv.gob.mx), and SBS (sbs.gob.pe).',
     },
-    startMs,
   );
 }
