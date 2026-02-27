@@ -18,10 +18,10 @@ afterAll(() => {
 });
 
 describe('search_regulations', () => {
-  it('returns results when searching "cybersecurity"', async () => {
-    const result = await searchRegulations(db, { query: 'cybersecurity' });
+  it('returns results when searching "seguranca"', async () => {
+    const result = await searchRegulations(db, { query: 'seguranca' });
     expect(result.total).toBeGreaterThan(0);
-    expect(result.results.length).toBeGreaterThan(0);
+    expect((result.results as any[]).length).toBeGreaterThan(0);
   });
 
   it('filters by country code "BR"', async () => {
@@ -80,9 +80,9 @@ describe('search_regulations', () => {
     expect(result.message).toContain('special characters');
   });
 
-  it('includes _meta in response', async () => {
+  it('includes _metadata in response', async () => {
     const result = await searchRegulations(db, { query: 'risk' });
-    expect(result._meta).toBeDefined();
-    expect(result._meta.disclaimer).toBeTruthy();
+    expect(result._metadata).toBeDefined();
+    expect(result._metadata.disclaimer).toBeTruthy();
   });
 });

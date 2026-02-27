@@ -39,8 +39,8 @@ describe('get_open_banking_rules', () => {
     }
   });
 
-  it('includes _meta in response', async () => {
+  it('includes _metadata in response', async () => {
     const result = await getOpenBankingRules(db, { country: 'BR' });
-    expect(result._meta).toBeDefined();
+    expect(result._metadata).toBeDefined();
   });
 });

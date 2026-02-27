@@ -49,9 +49,9 @@ describe('about', () => {
     expect(regulatorIds).toContain('BACEN');
   });
 
-  it('includes _meta in response', async () => {
+  it('includes _metadata in response', async () => {
     const result = await about(db);
-    expect(result._meta).toBeDefined();
+    expect(result._metadata).toBeDefined();
   });
 });
 

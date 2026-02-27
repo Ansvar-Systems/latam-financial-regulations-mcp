@@ -58,12 +58,12 @@ describe('get_provision', () => {
     expect(result.error).toBeDefined();
   });
 
-  it('includes _meta in response', async () => {
+  it('includes _metadata in response', async () => {
     const result = await getProvision(db, {
       country: 'BR',
       regulation_id: 'bacen-res-cmn-4893',
       article: 'art-1',
     });
-    expect(result._meta).toBeDefined();
+    expect(result._metadata).toBeDefined();
   });
 });

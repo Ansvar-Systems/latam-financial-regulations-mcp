@@ -41,8 +41,8 @@ describe('get_outsourcing_rules', () => {
     }
   });
 
-  it('includes _meta in response', async () => {
+  it('includes _metadata in response', async () => {
     const result = await getOutsourcingRules(db, { country: 'BR' });
-    expect(result._meta).toBeDefined();
+    expect(result._metadata).toBeDefined();
   });
 });
