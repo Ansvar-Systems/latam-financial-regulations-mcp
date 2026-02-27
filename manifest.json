@@ -1,0 +1,23 @@
+{
+  "name": "latam-financial-regulations-mcp",
+  "version": "0.1.0",
+  "description": "LATAM financial regulations MCP — BACEN, PIX, Open Finance, and banking cybersecurity rules across 6 Latin American jurisdictions.",
+  "author": "Ansvar Systems AB",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/Ansvar-Systems/latam-financial-regulations-mcp",
+  "category": "legal",
+  "tags": ["financial-regulation", "bacen", "pix", "open-finance", "latam", "cybersecurity"],
+  "transport": ["stdio", "streamable-http"],
+  "tools": [
+    "search_regulations",
+    "get_provision",
+    "get_cybersecurity_requirements",
+    "get_reporting_requirements",
+    "get_outsourcing_rules",
+    "get_open_banking_rules",
+    "compare_requirements",
+    "list_sources",
+    "about",
+    "check_data_freshness"
+  ]
+}

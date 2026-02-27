@@ -1,0 +1,21 @@
+name: latam-financial-regulations-mcp
+description: LATAM financial regulations MCP — BACEN, PIX, Open Finance, and banking cybersecurity rules across 6 Latin American jurisdictions.
+version: 0.1.0
+author: Ansvar Systems AB
+license: Apache-2.0
+repository: https://github.com/Ansvar-Systems/latam-financial-regulations-mcp
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      LATAM_FINANCIAL_REGULATIONS_DB_PATH:
+        type: string
+        description: Path to the SQLite database file
+  commandFunction:
+    |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', '@anthropic-ai/latam-financial-regulations-mcp'],
+      env: config.LATAM_FINANCIAL_REGULATIONS_DB_PATH ? { LATAM_FINANCIAL_REGULATIONS_DB_PATH: config.LATAM_FINANCIAL_REGULATIONS_DB_PATH } : {}
+    })

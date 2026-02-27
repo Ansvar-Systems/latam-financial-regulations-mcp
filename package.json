@@ -1,0 +1,64 @@
+{
+  "name": "@anthropic-ai/latam-financial-regulations-mcp",
+  "version": "0.1.0",
+  "description": "LATAM financial regulations MCP — BACEN, PIX, Open Finance, and banking cybersecurity rules across 6 Latin American jurisdictions",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "latam-financial-regulations-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "data/database.db"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:db": "tsx scripts/build-db.ts",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "ingest": "tsx scripts/ingest.ts",
+    "check-updates": "tsx scripts/check-updates.ts",
+    "lint": "tsc --noEmit",
+    "validate": "npm run lint && npm run test"
+  },
+  "dependencies": {
+    "@ansvar/mcp-sqlite": "^1.0.0",
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  },
+  "devDependencies": {
+    "@vercel/node": "^5.1.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0",
+    "@vitest/coverage-v8": "^3.0.0"
+  },
+  "author": "Ansvar Systems AB <hello@ansvar.ai>",
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "financial-regulation",
+    "bacen",
+    "pix",
+    "latam",
+    "compliance",
+    "cybersecurity",
+    "open-finance",
+    "banking",
+    "model-context-protocol"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ansvar-Systems/latam-financial-regulations-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ansvar-Systems/latam-financial-regulations-mcp/issues"
+  },
+  "homepage": "https://github.com/Ansvar-Systems/latam-financial-regulations-mcp#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

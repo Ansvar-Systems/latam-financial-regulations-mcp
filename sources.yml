@@ -1,0 +1,76 @@
+sources:
+  - id: br-bacen
+    full_name: Banco Central do Brasil
+    authority: BACEN
+    jurisdiction: Brazil
+    instrument_type: regulation
+    source_url: https://www.bcb.gov.br/
+    license: Public domain (Brazilian federal regulation)
+    update_frequency: monthly
+    key_instruments:
+      - Resolução 4,893/2021 (cybersecurity policy)
+      - PIX regulations
+      - Open Finance normatives
+
+  - id: br-cvm
+    full_name: Comissão de Valores Mobiliários
+    authority: CVM
+    jurisdiction: Brazil
+    instrument_type: regulation
+    source_url: https://www.cvm.gov.br/
+    license: Public domain (Brazilian federal regulation)
+    update_frequency: monthly
+
+  - id: br-susep
+    full_name: Superintendência de Seguros Privados
+    authority: SUSEP
+    jurisdiction: Brazil
+    instrument_type: regulation
+    source_url: https://www.susep.gov.br/
+    license: Public domain (Brazilian federal regulation)
+    update_frequency: monthly
+
+  - id: cl-cmf
+    full_name: Comisión para el Mercado Financiero
+    authority: CMF
+    jurisdiction: Chile
+    instrument_type: regulation
+    source_url: https://www.cmfchile.cl/
+    license: Public domain (Chilean regulation)
+    update_frequency: monthly
+
+  - id: co-sfc
+    full_name: Superintendencia Financiera de Colombia
+    authority: SFC
+    jurisdiction: Colombia
+    instrument_type: regulation
+    source_url: https://www.superfinanciera.gov.co/
+    license: Public domain (Colombian regulation)
+    update_frequency: monthly
+
+  - id: uy-bcu
+    full_name: Banco Central del Uruguay
+    authority: BCU
+    jurisdiction: Uruguay
+    instrument_type: regulation
+    source_url: https://www.bcu.gub.uy/
+    license: Public domain (Uruguayan regulation)
+    update_frequency: monthly
+
+  - id: mx-cnbv
+    full_name: Comisión Nacional Bancaria y de Valores
+    authority: CNBV
+    jurisdiction: Mexico
+    instrument_type: regulation
+    source_url: https://www.cnbv.gob.mx/
+    license: Public domain (Mexican federal regulation)
+    update_frequency: monthly
+
+  - id: pe-sbs
+    full_name: Superintendencia de Banca, Seguros y AFP
+    authority: SBS
+    jurisdiction: Peru
+    instrument_type: regulation
+    source_url: https://www.sbs.gob.pe/
+    license: Public domain (Peruvian regulation)
+    update_frequency: monthly
