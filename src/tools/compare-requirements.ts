@@ -4,7 +4,7 @@
  */
 
 import type { Database } from '@ansvar/mcp-sqlite';
-import { clampLimit, escapeFTS5Query, validateCountryCode, COUNTRIES } from './common.js';
+import { clampLimit, buildFtsQuery, validateCountryCode, COUNTRIES } from './common.js';
 import { withMeta } from '../utils/metadata.js';
 
 export interface CompareRequirementsArgs {
@@ -53,8 +53,21 @@ export async function compareRequirements(
   }
 
   const limitPerCountry = clampLimit(args.limit, 20);
-  const ftsQuery = escapeFTS5Query(args.topic);
+  const ftsQuery = buildFtsQuery(args.topic);
   const countryCodes = args.countries.map((c) => c.toUpperCase());
+
+  if (!ftsQuery) {
+    return withMeta(
+      {
+        topic: args.topic,
+        countries_compared: countryCodes.map((c) => ({ code: c, name: COUNTRIES[c] ?? c })),
+        total_results: 0,
+        comparison: {},
+        message: 'Topic is empty or contains only special characters.',
+      },
+      startMs,
+    );
+  }
 
   const comparison: Record<string, ComparisonEntry[]> = {};
 

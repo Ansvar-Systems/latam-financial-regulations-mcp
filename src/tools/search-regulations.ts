@@ -5,7 +5,7 @@
  */
 
 import type { Database } from '@ansvar/mcp-sqlite';
-import { clampLimit, escapeFTS5Query, validateCountryCode, validateSector } from './common.js';
+import { clampLimit, buildFtsQuery, validateCountryCode, validateSector } from './common.js';
 import { withMeta } from '../utils/metadata.js';
 
 export interface SearchRegulationsArgs {
@@ -45,7 +45,20 @@ export async function searchRegulations(
   }
 
   const limit = clampLimit(args.limit);
-  const ftsQuery = escapeFTS5Query(args.query);
+  const ftsQuery = buildFtsQuery(args.query);
+
+  if (!ftsQuery) {
+    return withMeta(
+      {
+        query: args.query,
+        filters: { country: args.country?.toUpperCase() ?? null, sector: args.sector?.toLowerCase() ?? null },
+        total: 0,
+        results: [],
+        message: 'Query is empty or contains only special characters.',
+      },
+      startMs,
+    );
+  }
 
   const conditions: string[] = ['provisions_fts MATCH ?'];
   const params: (string | number)[] = [ftsQuery];

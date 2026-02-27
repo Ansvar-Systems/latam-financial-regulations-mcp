@@ -51,7 +51,7 @@ const TOOLS = [
     inputSchema: {
       type: 'object' as const,
       properties: {
-        query: { type: 'string', description: 'Search query (e.g. "cybersecurity incident reporting")' },
+        query: { type: 'string', minLength: 1, description: 'Search query (e.g. "cybersecurity incident reporting")' },
         country: {
           type: 'string',
           description: 'Filter by country code: BR, CL, CO, UY, MX, or PE',
