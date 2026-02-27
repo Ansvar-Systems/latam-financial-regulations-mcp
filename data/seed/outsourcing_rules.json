@@ -1,0 +1,170 @@
+[
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "rule_type": "prior_notification",
+    "description": "A instituição deve comunicar ao Banco Central do Brasil a contratação de serviços de processamento e armazenamento de dados e de computação em nuvem com antecedência mínima de 60 dias do início da prestação do serviço, informando a empresa contratada, os serviços e a localização dos dados.",
+    "legal_basis": "Resolução BCB 85/2021, Art. 8"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "rule_type": "risk_assessment",
+    "description": "Previamente à contratação de serviços em nuvem, a instituição deve adotar procedimentos de governança e gestão proporcionais à relevância do serviço e aos riscos, incluindo verificação da capacidade do prestador de cumprir a legislação e regulamentação vigentes.",
+    "legal_basis": "Resolução BCB 85/2021, Art. 3"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "rule_type": "contractual_requirements",
+    "description": "O contrato de serviços em nuvem deve prever: indicação dos países e regiões de armazenamento de dados; controles de segregação e acesso; obrigação de confidencialidade; acesso do BCB a dados e informações para fins de supervisão.",
+    "legal_basis": "Resolução BCB 85/2021, Art. 5"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "rule_type": "data_sovereignty",
+    "description": "A contratação de serviços em nuvem no exterior deve observar as mesmas exigências nacionais, devendo a instituição assegurar que o Banco Central tenha acesso aos dados, informações e documentação mantidos no exterior.",
+    "legal_basis": "Resolução BCB 85/2021, Art. 10"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "rule_type": "exit_strategy",
+    "description": "A instituição deve manter plano de contingência abrangendo procedimentos para a substituição do prestador de serviços em nuvem, assegurando a continuidade dos serviços e a portabilidade dos dados.",
+    "legal_basis": "Resolução BCB 85/2021, Art. 5(V)"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "CVM",
+    "rule_type": "risk_assessment",
+    "description": "A contratação de serviços de nuvem por participantes do mercado de valores mobiliários deve ser precedida de avaliação de riscos e procedimentos que assegurem a proteção dos dados dos investidores.",
+    "legal_basis": "Resolução CVM 35/2021, Art. 10"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "CVM",
+    "rule_type": "supervisory_access",
+    "description": "O prestador de serviços em nuvem contratado deve garantir a capacidade da CVM de acessar dados, informações e sistemas necessários para o exercício de suas atribuições legais de supervisão.",
+    "legal_basis": "Resolução CVM 35/2021, Art. 10(III)"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "SUSEP",
+    "rule_type": "prior_notification",
+    "description": "A contratação de serviços de processamento, armazenamento de dados e computação em nuvem por supervisionadas da SUSEP deve ser comunicada previamente à autarquia, com avaliação de riscos e controles de segregação e proteção de dados.",
+    "legal_basis": "Circular SUSEP 638/2021, Art. 11"
+  },
+  {
+    "country_code": "CL",
+    "regulator_id": "CMF",
+    "rule_type": "risk_assessment",
+    "description": "Las entidades deben realizar una evaluación previa de los proveedores de servicios tecnológicos, incluyendo análisis de riesgos asociados a la externalización y verificación de la capacidad del proveedor.",
+    "legal_basis": "NCG 311, Art. 10(I)"
+  },
+  {
+    "country_code": "CL",
+    "regulator_id": "CMF",
+    "rule_type": "contractual_requirements",
+    "description": "Los contratos de externalización de servicios tecnológicos deben incluir cláusulas de seguridad, niveles de servicio (SLA), confidencialidad, derecho de auditoría para la entidad y la CMF, y planes de continuidad y salida.",
+    "legal_basis": "NCG 311, Art. 10(II-IV)"
+  },
+  {
+    "country_code": "CL",
+    "regulator_id": "CMF",
+    "rule_type": "exit_strategy",
+    "description": "Las entidades deben contar con planes de salida y continuidad que aseguren la portabilidad de datos y la continuidad de los servicios en caso de terminación del contrato con el proveedor.",
+    "legal_basis": "NCG 311, Art. 10(IV)"
+  },
+  {
+    "country_code": "CO",
+    "regulator_id": "SFC",
+    "rule_type": "risk_assessment",
+    "description": "Las entidades vigiladas deben realizar una evaluación integral de riesgos antes de contratar servicios de terceros para procesos críticos, incluyendo análisis de riesgos de concentración, operacionales y de seguridad de la información.",
+    "legal_basis": "CBJ Parte I, Título III, Cap. V"
+  },
+  {
+    "country_code": "CO",
+    "regulator_id": "SFC",
+    "rule_type": "contractual_requirements",
+    "description": "Los contratos de tercerización deben incluir: cláusulas de confidencialidad y protección de datos; niveles de servicio; derecho de auditoría para la entidad y la SFC; ubicación de los datos; plan de contingencia y plan de salida.",
+    "legal_basis": "CBJ Parte I, Título III, Cap. V; Circular Externa 007/2018"
+  },
+  {
+    "country_code": "CO",
+    "regulator_id": "SFC",
+    "rule_type": "supervisory_access",
+    "description": "La SFC debe tener acceso irrestricto a los datos, la información y los sistemas del proveedor de servicios tercerizados que sean necesarios para el ejercicio de sus funciones de supervisión.",
+    "legal_basis": "Circular Externa 007/2018"
+  },
+  {
+    "country_code": "UY",
+    "regulator_id": "BCU",
+    "rule_type": "prior_notification",
+    "description": "La tercerización de servicios de tecnología de la información relevantes debe ser comunicada previamente al BCU, incluyendo la identificación del proveedor y los servicios contratados.",
+    "legal_basis": "Circular 2.307, Art. 15(III)"
+  },
+  {
+    "country_code": "UY",
+    "regulator_id": "BCU",
+    "rule_type": "risk_assessment",
+    "description": "La tercerización de servicios TI requiere una evaluación previa de riesgos que contemple la criticidad de los procesos involucrados y la capacidad del proveedor de mantener los niveles de seguridad requeridos.",
+    "legal_basis": "Circular 2.307, Art. 15(I)"
+  },
+  {
+    "country_code": "UY",
+    "regulator_id": "BCU",
+    "rule_type": "contractual_requirements",
+    "description": "Los contratos de tercerización deben incluir cláusulas de seguridad, confidencialidad, derecho de auditoría, monitoreo continuo de la calidad del servicio y cumplimiento de controles de seguridad.",
+    "legal_basis": "Circular 2.307, Art. 15(II)"
+  },
+  {
+    "country_code": "MX",
+    "regulator_id": "CNBV",
+    "rule_type": "risk_assessment",
+    "description": "Las instituciones de crédito deben evaluar los riesgos asociados a la contratación de servicios tecnológicos de terceros, incluyendo riesgos de concentración, operacionales, de continuidad y de seguridad de la información.",
+    "legal_basis": "CUB Título V; Disposiciones de seguridad"
+  },
+  {
+    "country_code": "MX",
+    "regulator_id": "CNBV",
+    "rule_type": "contractual_requirements",
+    "description": "Los contratos con proveedores de servicios tecnológicos deben incluir: ubicación de los datos; niveles de servicio; confidencialidad; derecho de auditoría; plan de continuidad y de salida; notificación de incidentes.",
+    "legal_basis": "CUB Título V"
+  },
+  {
+    "country_code": "MX",
+    "regulator_id": "CNBV",
+    "rule_type": "prior_notification",
+    "description": "Las instituciones deben informar a la CNBV sobre la contratación de servicios de procesamiento y almacenamiento de datos con terceros cuando involucren datos sensibles de clientes o procesos críticos.",
+    "legal_basis": "CUB Título V; Disposiciones de seguridad"
+  },
+  {
+    "country_code": "PE",
+    "regulator_id": "SBS",
+    "rule_type": "prior_notification",
+    "description": "Las empresas deben comunicar a la SBS, con anticipación no menor de 30 días calendario, la contratación de servicios de computación en la nube para procesos significativos o información sensible de clientes.",
+    "legal_basis": "Resolución SBS 3330-2019, Art. 10"
+  },
+  {
+    "country_code": "PE",
+    "regulator_id": "SBS",
+    "rule_type": "risk_assessment",
+    "description": "La evaluación previa de riesgos para servicios en la nube debe considerar: criticidad de la información; riesgos de concentración con un proveedor; riesgos de localización geográfica; capacidad de cumplimiento regulatorio del proveedor.",
+    "legal_basis": "Resolución SBS 3330-2019, Art. 4"
+  },
+  {
+    "country_code": "PE",
+    "regulator_id": "SBS",
+    "rule_type": "contractual_requirements",
+    "description": "Los contratos de servicios en la nube deben incluir: ubicación de centros de datos; SLA; confidencialidad; derecho de auditoría para la empresa y la SBS; plan de salida y migración de datos; procedimientos de notificación de incidentes.",
+    "legal_basis": "Resolución SBS 3330-2019, Art. 7"
+  },
+  {
+    "country_code": "PE",
+    "regulator_id": "SBS",
+    "rule_type": "data_sovereignty",
+    "description": "Los contratos deben especificar la ubicación geográfica de los centros de datos y asegurar que la SBS pueda acceder a la información y a los locales del proveedor para fines de supervisión, independientemente de la ubicación.",
+    "legal_basis": "Resolución SBS 3330-2019, Art. 7(I)(IV)"
+  }
+]

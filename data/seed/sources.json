@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bacen",
+    "full_name": "Banco Central do Brasil — Normas do Sistema Financeiro",
+    "authority": "BACEN",
+    "jurisdiction": "BR",
+    "source_url": "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas",
+    "last_fetched": null,
+    "last_updated": null,
+    "item_count": 0
+  },
+  {
+    "id": "cvm",
+    "full_name": "CVM — Legislação e Regulamentação",
+    "authority": "CVM",
+    "jurisdiction": "BR",
+    "source_url": "https://www.cvm.gov.br/legislacao/",
+    "last_fetched": null,
+    "last_updated": null,
+    "item_count": 0
+  },
+  {
+    "id": "susep",
+    "full_name": "SUSEP — Normas",
+    "authority": "SUSEP",
+    "jurisdiction": "BR",
+    "source_url": "https://www.susep.gov.br/menu/informacoes-ao-mercado/normas",
+    "last_fetched": null,
+    "last_updated": null,
+    "item_count": 0
+  },
+  {
+    "id": "cmf",
+    "full_name": "CMF Chile — Normativa",
+    "authority": "CMF",
+    "jurisdiction": "CL",
+    "source_url": "https://www.cmfchile.cl/portal/legislacion/615/w3-channel.html",
+    "last_fetched": null,
+    "last_updated": null,
+    "item_count": 0
+  },
+  {
+    "id": "sfc",
+    "full_name": "SFC Colombia — Normativa",
+    "authority": "SFC",
+    "jurisdiction": "CO",
+    "source_url": "https://www.superfinanciera.gov.co/jsp/60940",
+    "last_fetched": null,
+    "last_updated": null,
+    "item_count": 0
+  },
+  {
+    "id": "bcu",
+    "full_name": "BCU Uruguay — Normativa",
+    "authority": "BCU",
+    "jurisdiction": "UY",
+    "source_url": "https://www.bcu.gub.uy/Acerca-de-BCU/Normativa/",
+    "last_fetched": null,
+    "last_updated": null,
+    "item_count": 0
+  },
+  {
+    "id": "cnbv",
+    "full_name": "CNBV México — Normatividad",
+    "authority": "CNBV",
+    "jurisdiction": "MX",
+    "source_url": "https://www.cnbv.gob.mx/Normatividad/",
+    "last_fetched": null,
+    "last_updated": null,
+    "item_count": 0
+  },
+  {
+    "id": "sbs",
+    "full_name": "SBS Perú — Normativa",
+    "authority": "SBS",
+    "jurisdiction": "PE",
+    "source_url": "https://www.sbs.gob.pe/normativa",
+    "last_fetched": null,
+    "last_updated": null,
+    "item_count": 0
+  }
+]

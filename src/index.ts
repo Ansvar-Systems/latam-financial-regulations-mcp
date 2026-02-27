@@ -17,7 +17,7 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
-import { Database } from '@ansvar/mcp-sqlite';
+import Database from '@ansvar/mcp-sqlite';
 
 import { searchRegulations } from './tools/search-regulations.js';
 import { getProvision } from './tools/get-provision.js';
@@ -51,7 +51,7 @@ const TOOLS = [
     inputSchema: {
       type: 'object' as const,
       properties: {
-        query: { type: 'string', description: 'Search query (e.g. "cybersecurity incident reporting")' },
+        query: { type: 'string', minLength: 1, description: 'Search query (e.g. "cybersecurity incident reporting")' },
         country: {
           type: 'string',
           description: 'Filter by country code: BR, CL, CO, UY, MX, or PE',
@@ -244,38 +244,40 @@ async function main(): Promise<void> {
   // -- Call tool ------------------------------------------------------------
 
   server.setRequestHandler(CallToolRequestSchema, async (request) => {
-    const { name, arguments: args } = request.params;
+    const { name, arguments: rawArgs } = request.params;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const args = (rawArgs ?? {}) as any;
 
     try {
       let result: unknown;
 
       switch (name) {
         case 'search_regulations':
-          result = await searchRegulations(db, args as Parameters<typeof searchRegulations>[1]);
+          result = await searchRegulations(db, args);
           break;
 
         case 'get_provision':
-          result = await getProvision(db, args as Parameters<typeof getProvision>[1]);
+          result = await getProvision(db, args);
           break;
 
         case 'get_cybersecurity_requirements':
-          result = await getCybersecurityRequirements(db, args as Parameters<typeof getCybersecurityRequirements>[1]);
+          result = await getCybersecurityRequirements(db, args);
           break;
 
         case 'get_reporting_requirements':
-          result = await getReportingRequirements(db, args as Parameters<typeof getReportingRequirements>[1]);
+          result = await getReportingRequirements(db, args);
           break;
 
         case 'get_outsourcing_rules':
-          result = await getOutsourcingRules(db, args as Parameters<typeof getOutsourcingRules>[1]);
+          result = await getOutsourcingRules(db, args);
           break;
 
         case 'get_open_banking_rules':
-          result = await getOpenBankingRules(db, args as Parameters<typeof getOpenBankingRules>[1]);
+          result = await getOpenBankingRules(db, args);
           break;
 
         case 'compare_requirements':
-          result = await compareRequirements(db, args as Parameters<typeof compareRequirements>[1]);
+          result = await compareRequirements(db, args);
           break;
 
         case 'list_sources':

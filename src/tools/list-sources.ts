@@ -19,7 +19,6 @@ export interface Source {
 export async function listSources(
   db: Database,
 ): Promise<ReturnType<typeof withMeta>> {
-  const startMs = Date.now();
 
   const sql = `
     SELECT
@@ -51,6 +50,5 @@ export async function listSources(
       },
       sources: rows,
     },
-    startMs,
   );
 }

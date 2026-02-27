@@ -27,23 +27,20 @@ export async function getCybersecurityRequirements(
   db: Database,
   args: CybersecurityRequirementsArgs,
 ): Promise<ReturnType<typeof withMeta>> {
-  const startMs = Date.now();
 
   if (!args.country) {
-    return withMeta({ error: 'country parameter is required', requirements: [] }, startMs);
+    return withMeta({ error: 'country parameter is required', requirements: [] });
   }
 
   if (!validateCountryCode(args.country)) {
     return withMeta(
       { error: `Invalid country code: ${args.country}. Use BR, CL, CO, UY, MX, or PE.`, requirements: [] },
-      startMs,
     );
   }
 
   if (args.sector && !validateSector(args.sector)) {
     return withMeta(
       { error: `Invalid sector: ${args.sector}. Use banking, securities, insurance, fintech, or open_finance.`, requirements: [] },
-      startMs,
     );
   }
 
@@ -85,6 +82,5 @@ export async function getCybersecurityRequirements(
       total: rows.length,
       requirements: rows,
     },
-    startMs,
   );
 }

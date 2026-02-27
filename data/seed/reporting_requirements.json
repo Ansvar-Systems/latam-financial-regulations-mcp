@@ -1,0 +1,130 @@
+[
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "event_type": "cyber_incident",
+    "timeline": "Até 10 dias úteis a contar da data de ocorrência ou da data em que a instituição tiver conhecimento do incidente.",
+    "channel": "Sistema de comunicação do Banco Central do Brasil (BCB) — Formulário de comunicação de incidentes relevantes.",
+    "penalties": "Penalidades administrativas conforme Lei nº 13.506/2017: multa de até R$ 2 bilhões ou 2% do faturamento; suspensão ou cassação de autorização para funcionamento; advertência; inabilitação de administradores."
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "event_type": "service_disruption",
+    "timeline": "Até 10 dias úteis da interrupção relevante de serviços, incluindo detalhamento da duração, serviços afetados e quantidade de clientes impactados.",
+    "channel": "Sistema de comunicação do Banco Central do Brasil (BCB).",
+    "penalties": "Penalidades administrativas conforme Lei nº 13.506/2017: multa; advertência; suspensão; cassação."
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "event_type": "pix_fraud",
+    "timeline": "Notificação imediata ao BCB de incidentes de fraude no Pix, sem demora injustificada, com ativação do Mecanismo Especial de Devolução (MED) quando aplicável.",
+    "channel": "Sistema de comunicação do Pix / DICT (Diretório de Identificadores de Contas Transacionais).",
+    "penalties": "Exclusão do arranjo Pix; multas conforme regulamento do Pix; responsabilidade civil perante os usuários."
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "CVM",
+    "event_type": "cyber_incident",
+    "timeline": "No prazo de 5 dias úteis a contar da detecção do incidente relevante de segurança cibernética.",
+    "channel": "Comunicação formal à CVM mediante sistema eletrônico de envio de documentos.",
+    "penalties": "Multa; suspensão da autorização para funcionamento; advertência; inabilitação temporária de administradores; conforme Lei nº 6.385/1976."
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "SUSEP",
+    "event_type": "cyber_incident",
+    "timeline": "No prazo de 5 dias úteis contados da detecção do incidente relevante de segurança cibernética, incluindo descrição, impacto, medidas de contenção e plano de prevenção.",
+    "channel": "Comunicação formal à SUSEP mediante sistema eletrônico de supervisão.",
+    "penalties": "Penalidades conforme Decreto-Lei nº 73/1966 e Lei Complementar nº 126/2007: multa; suspensão do exercício de atividades; cassação de autorização para funcionamento."
+  },
+  {
+    "country_code": "CL",
+    "regulator_id": "CMF",
+    "event_type": "cyber_incident",
+    "timeline": "Dentro de las 24 horas siguientes a la detección del incidente de ciberseguridad que pueda afectar la continuidad operacional, integridad de datos o seguridad de clientes.",
+    "channel": "Sistema de reporte de incidentes de la CMF — plataforma electrónica de supervisión. Incluir descripción del incidente, impacto estimado y medidas adoptadas.",
+    "penalties": "Multas conforme Ley General de Bancos: hasta UF 5.000 (aproximadamente USD 200.000); amonestación; limitación de operaciones; revocación de autorización en casos graves."
+  },
+  {
+    "country_code": "CL",
+    "regulator_id": "CMF",
+    "event_type": "operational_disruption",
+    "timeline": "Notificación inmediata a la CMF de interrupciones operacionales que afecten servicios críticos ofrecidos a los clientes, con actualización periódica hasta la resolución completa.",
+    "channel": "Sistema de reporte de la CMF y canales de comunicación de emergencia establecidos.",
+    "penalties": "Multas y sanciones conforme la Ley General de Bancos y normativa de la CMF."
+  },
+  {
+    "country_code": "CO",
+    "regulator_id": "SFC",
+    "event_type": "cyber_incident",
+    "timeline": "Dentro de las 24 horas siguientes a la detección del incidente de ciberseguridad significativo, utilizando el formato establecido por la SFC.",
+    "channel": "Formato de reporte de incidentes de la SFC — Sistema Integral de Información del Mercado de Valores (SIMEV) o canal de reporte directo a la Delegatura para Riesgo Operativo.",
+    "penalties": "Multas hasta 100.000 SMMLV (aproximadamente COP 130.000 millones / USD 30 millones); suspensión o cancelación del registro; remoción de administradores; conforme Decreto 2555/2010."
+  },
+  {
+    "country_code": "CO",
+    "regulator_id": "SFC",
+    "event_type": "data_breach",
+    "timeline": "Notificación a la SFC dentro de 24 horas de la detección cuando el incidente comprometa datos personales o financieros de clientes. Adicionalmente, notificar a la SIC conforme Ley 1581/2012.",
+    "channel": "Reporte a la SFC por canal de incidentes de ciberseguridad. Reporte separado a la SIC (Superintendencia de Industria y Comercio) para la dimensión de protección de datos personales.",
+    "penalties": "Multas SFC conforme Decreto 2555/2010; multas SIC hasta 2.000 SMMLV; posible bloqueo temporal de bases de datos."
+  },
+  {
+    "country_code": "UY",
+    "regulator_id": "BCU",
+    "event_type": "cyber_incident",
+    "timeline": "Comunicación al BCU de incidentes significativos de seguridad de la información dentro de las 48 horas de su detección.",
+    "channel": "Comunicación formal al Banco Central del Uruguay — Superintendencia de Servicios Financieros, mediante los canales de reporte establecidos.",
+    "penalties": "Sanciones conforme Ley 16.696 (Carta Orgánica del BCU): multas; observaciones; intervención; suspensión de actividades; revocación de autorización para funcionar."
+  },
+  {
+    "country_code": "UY",
+    "regulator_id": "BCU",
+    "event_type": "operational_disruption",
+    "timeline": "Notificación al BCU cuando la interrupción de servicios tecnológicos críticos supere los umbrales definidos en los planes de continuidad, sin demora injustificada.",
+    "channel": "Superintendencia de Servicios Financieros del BCU — canal de reporte de incidentes operacionales.",
+    "penalties": "Sanciones administrativas conforme normativa del BCU; posible intervención supervisora."
+  },
+  {
+    "country_code": "MX",
+    "regulator_id": "CNBV",
+    "event_type": "cyber_incident",
+    "timeline": "Dentro de las 24 horas siguientes a la detección del incidente de seguridad de la información relevante.",
+    "channel": "Sistema de reporte de la CNBV — notificación electrónica a la Vicepresidencia de Supervisión de Procesos Preventivos. Incluir naturaleza, alcance, impacto y plan de remediación.",
+    "penalties": "Multas conforme Ley de Instituciones de Crédito: hasta 100.000 UDIS (aproximadamente MXN 800.000 / USD 45.000) por infracción; suspensión de operaciones; inhabilitación de funcionarios."
+  },
+  {
+    "country_code": "MX",
+    "regulator_id": "CNBV",
+    "event_type": "data_breach",
+    "timeline": "Notificación inmediata a la CNBV cuando se comprometan datos de clientes. Adicionalmente, notificación al INAI conforme LFPDPPP si se trata de datos personales.",
+    "channel": "Reporte a CNBV por canal de incidentes de seguridad. Reporte separado al INAI para la dimensión de protección de datos personales.",
+    "penalties": "Multas CNBV conforme normativa aplicable; multas INAI de 100 a 320.000 días de salario mínimo (hasta aproximadamente MXN 25 millones)."
+  },
+  {
+    "country_code": "MX",
+    "regulator_id": "CNBV",
+    "event_type": "fintech_incident",
+    "timeline": "Las instituciones de tecnología financiera deben reportar incidentes de seguridad a la CNBV de forma inmediata conforme a las disposiciones aplicables de la Ley Fintech.",
+    "channel": "Canal de reporte de la CNBV para instituciones de tecnología financiera.",
+    "penalties": "Multas y sanciones conforme Ley Fintech (LRITF): multas; revocación de autorización; inhabilitación de directivos."
+  },
+  {
+    "country_code": "PE",
+    "regulator_id": "SBS",
+    "event_type": "cyber_incident",
+    "timeline": "Plazo máximo de 24 horas desde la detección del incidente de ciberseguridad significativo.",
+    "channel": "Sistema de reportes de la SBS — comunicación electrónica a la Superintendencia Adjunta de Riesgos. Incluir descripción, clasificación, impacto y acciones de contención.",
+    "penalties": "Sanciones conforme Ley General del Sistema Financiero (Ley 26702): multas hasta UIT 200 (aproximadamente PEN 990.000 / USD 260.000); suspensión de operaciones; intervención; disolución y liquidación."
+  },
+  {
+    "country_code": "PE",
+    "regulator_id": "SBS",
+    "event_type": "cloud_service_disruption",
+    "timeline": "Comunicación inmediata a la SBS cuando una interrupción en servicios de computación en la nube afecte procesos significativos o información sensible de clientes.",
+    "channel": "Comunicación a la Superintendencia Adjunta de Riesgos de la SBS por canal de reporte establecido.",
+    "penalties": "Sanciones administrativas conforme Resolución SBS 3330-2019 y Ley 26702."
+  }
+]

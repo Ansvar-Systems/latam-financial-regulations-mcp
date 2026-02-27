@@ -4,7 +4,7 @@
  */
 
 import type { Database } from '@ansvar/mcp-sqlite';
-import { clampLimit, escapeFTS5Query, validateCountryCode, COUNTRIES } from './common.js';
+import { clampLimit, buildFtsQuery, validateCountryCode, COUNTRIES } from './common.js';
 import { withMeta } from '../utils/metadata.js';
 
 export interface CompareRequirementsArgs {
@@ -28,17 +28,15 @@ export async function compareRequirements(
   db: Database,
   args: CompareRequirementsArgs,
 ): Promise<ReturnType<typeof withMeta>> {
-  const startMs = Date.now();
 
   if (!args.countries || !Array.isArray(args.countries) || args.countries.length < 2) {
     return withMeta(
       { error: 'countries must be an array with at least 2 country codes', comparison: {} },
-      startMs,
     );
   }
 
   if (!args.topic || args.topic.trim().length === 0) {
-    return withMeta({ error: 'topic parameter is required', comparison: {} }, startMs);
+    return withMeta({ error: 'topic parameter is required', comparison: {} });
   }
 
   const invalidCodes = args.countries.filter((c) => !validateCountryCode(c));
@@ -48,13 +46,24 @@ export async function compareRequirements(
         error: `Invalid country codes: ${invalidCodes.join(', ')}. Use BR, CL, CO, UY, MX, or PE.`,
         comparison: {},
       },
-      startMs,
     );
   }
 
   const limitPerCountry = clampLimit(args.limit, 20);
-  const ftsQuery = escapeFTS5Query(args.topic);
+  const ftsQuery = buildFtsQuery(args.topic);
   const countryCodes = args.countries.map((c) => c.toUpperCase());
+
+  if (!ftsQuery) {
+    return withMeta(
+      {
+        topic: args.topic,
+        countries_compared: countryCodes.map((c) => ({ code: c, name: COUNTRIES[c] ?? c })),
+        total_results: 0,
+        comparison: {},
+        message: 'Topic is empty or contains only special characters.',
+      },
+    );
+  }
 
   const comparison: Record<string, ComparisonEntry[]> = {};
 
@@ -94,6 +103,5 @@ export async function compareRequirements(
       total_results: totalResults,
       comparison,
     },
-    startMs,
   );
 }

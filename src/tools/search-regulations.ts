@@ -5,7 +5,7 @@
  */
 
 import type { Database } from '@ansvar/mcp-sqlite';
-import { clampLimit, escapeFTS5Query, validateCountryCode, validateSector } from './common.js';
+import { clampLimit, buildFtsQuery, validateCountryCode, validateSector } from './common.js';
 import { withMeta } from '../utils/metadata.js';
 
 export interface SearchRegulationsArgs {
@@ -30,22 +30,33 @@ export async function searchRegulations(
   db: Database,
   args: SearchRegulationsArgs,
 ): Promise<ReturnType<typeof withMeta>> {
-  const startMs = Date.now();
 
   if (!args.query || args.query.trim().length === 0) {
-    return withMeta({ error: 'query parameter is required', results: [] }, startMs);
+    return withMeta({ error: 'query parameter is required', results: [] });
   }
 
   if (args.country && !validateCountryCode(args.country)) {
-    return withMeta({ error: `Invalid country code: ${args.country}. Use BR, CL, CO, UY, MX, or PE.`, results: [] }, startMs);
+    return withMeta({ error: `Invalid country code: ${args.country}. Use BR, CL, CO, UY, MX, or PE.`, results: [] });
   }
 
   if (args.sector && !validateSector(args.sector)) {
-    return withMeta({ error: `Invalid sector: ${args.sector}. Use banking, securities, insurance, fintech, or open_finance.`, results: [] }, startMs);
+    return withMeta({ error: `Invalid sector: ${args.sector}. Use banking, securities, insurance, fintech, or open_finance.`, results: [] });
   }
 
   const limit = clampLimit(args.limit);
-  const ftsQuery = escapeFTS5Query(args.query);
+  const ftsQuery = buildFtsQuery(args.query);
+
+  if (!ftsQuery) {
+    return withMeta(
+      {
+        query: args.query,
+        filters: { country: args.country?.toUpperCase() ?? null, sector: args.sector?.toLowerCase() ?? null },
+        total: 0,
+        results: [],
+        message: 'Query is empty or contains only special characters.',
+      },
+    );
+  }
 
   const conditions: string[] = ['provisions_fts MATCH ?'];
   const params: (string | number)[] = [ftsQuery];
@@ -92,6 +103,5 @@ export async function searchRegulations(
       total: rows.length,
       results: rows,
     },
-    startMs,
   );
 }

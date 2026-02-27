@@ -41,16 +41,28 @@ export function clampLimit(limit: number | undefined, max: number = MAX_LIMIT): 
 }
 
 /**
- * Escape user input for FTS5 queries.
- * Wraps each token in double quotes to prevent FTS5 syntax injection.
+ * Build a robust FTS5 query from user input.
+ * - Strips FTS5 special chars
+ * - Adds prefix matching (word*) for cross-language partial matching
+ * - Returns null for empty/whitespace-only input
  */
+export function buildFtsQuery(raw: string): string | null {
+  const cleaned = raw
+    .replace(/["\*\(\)\{\}\[\]:^~!@#$%&|\\<>=;,]/g, ' ')
+    .replace(/\b(AND|OR|NOT|NEAR)\b/gi, '')
+    .trim();
+
+  if (!cleaned) return null;
+
+  const tokens = cleaned.split(/\s+/).filter(t => t.length > 0);
+  if (tokens.length === 0) return null;
+
+  return tokens.map(t => `"${t}"*`).join(' ');
+}
+
+/** @deprecated Use buildFtsQuery instead */
 export function escapeFTS5Query(query: string): string {
-  return query
-    .replace(/["""]/g, '')
-    .split(/\s+/)
-    .filter((token) => token.length > 0)
-    .map((token) => `"${token}"`)
-    .join(' ');
+  return buildFtsQuery(query) ?? '';
 }
 
 /**

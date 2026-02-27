@@ -1,19 +1,22 @@
 #!/usr/bin/env tsx
 
 /**
- * build-db.ts — Build the SQLite database with the full schema for
- * LATAM Financial Regulations MCP.
+ * build-db.ts — Build the SQLite database for LATAM Financial Regulations MCP.
+ *
+ * Loads seed data from data/seed/ JSON files and creates the full schema
+ * with FTS5 indexes.
  *
  * Usage: tsx scripts/build-db.ts [--output path/to/database.db]
  */
 
-import { Database } from '@ansvar/mcp-sqlite';
-import { resolve, dirname } from 'node:path';
+import Database from '@ansvar/mcp-sqlite';
+import { resolve, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { mkdirSync } from 'node:fs';
+import { mkdirSync, existsSync, unlinkSync, readFileSync, statSync } from 'node:fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const defaultDbPath = resolve(__dirname, '..', 'data', 'database.db');
+const seedDir = resolve(__dirname, '..', 'data', 'seed');
 
 function getOutputPath(): string {
   const idx = process.argv.indexOf('--output');
@@ -23,7 +26,17 @@ function getOutputPath(): string {
   return defaultDbPath;
 }
 
-function buildSchema(db: Database): void {
+function loadJson<T>(filename: string): T {
+  const filePath = join(seedDir, filename);
+  const raw = readFileSync(filePath, 'utf-8');
+  return JSON.parse(raw) as T;
+}
+
+// ---------------------------------------------------------------------------
+// Schema
+// ---------------------------------------------------------------------------
+
+function buildSchema(db: InstanceType<typeof Database>): void {
   db.exec(`
     -- Regulators
     CREATE TABLE IF NOT EXISTS regulators (
@@ -140,6 +153,12 @@ function buildSchema(db: Database): void {
       item_count INTEGER DEFAULT 0
     );
 
+    -- Database metadata
+    CREATE TABLE IF NOT EXISTS db_metadata (
+      key TEXT PRIMARY KEY,
+      value TEXT
+    );
+
     -- Indexes for common queries
     CREATE INDEX IF NOT EXISTS idx_provisions_country ON provisions(country_code);
     CREATE INDEX IF NOT EXISTS idx_provisions_regulation ON provisions(regulation_id);
@@ -153,73 +172,267 @@ function buildSchema(db: Database): void {
   `);
 }
 
-function seedRegulators(db: Database): void {
-  const insert = db.prepare(
-    'INSERT OR IGNORE INTO regulators (id, country_code, name, full_name, sector, website) VALUES (?, ?, ?, ?, ?, ?)',
-  );
+// ---------------------------------------------------------------------------
+// Seed data types
+// ---------------------------------------------------------------------------
 
-  const regulators = [
-    ['BACEN', 'BR', 'BACEN', 'Banco Central do Brasil', 'banking', 'https://www.bcb.gov.br'],
-    ['CVM', 'BR', 'CVM', 'Comissao de Valores Mobiliarios', 'securities', 'https://www.cvm.gov.br'],
-    ['SUSEP', 'BR', 'SUSEP', 'Superintendencia de Seguros Privados', 'insurance', 'https://www.susep.gov.br'],
-    ['CMF', 'CL', 'CMF', 'Comision para el Mercado Financiero', 'banking', 'https://www.cmfchile.cl'],
-    ['SFC', 'CO', 'SFC', 'Superintendencia Financiera de Colombia', 'banking', 'https://www.superfinanciera.gov.co'],
-    ['BCU', 'UY', 'BCU', 'Banco Central del Uruguay', 'banking', 'https://www.bcu.gub.uy'],
-    ['CNBV', 'MX', 'CNBV', 'Comision Nacional Bancaria y de Valores', 'banking', 'https://www.cnbv.gob.mx'],
-    ['SBS', 'PE', 'SBS', 'Superintendencia de Banca, Seguros y AFP', 'banking', 'https://www.sbs.gob.pe'],
-  ];
-
-  for (const r of regulators) {
-    insert.run(...r);
-  }
+interface Regulator {
+  id: string;
+  country_code: string;
+  name: string;
+  full_name: string;
+  sector: string;
+  website: string;
 }
 
-function seedSources(db: Database): void {
-  const insert = db.prepare(
-    'INSERT OR IGNORE INTO sources (id, full_name, authority, jurisdiction, source_url, last_fetched, last_updated, item_count) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
-  );
-
-  const sources = [
-    ['bacen', 'Banco Central do Brasil - Normas', 'BACEN', 'BR', 'https://www.bcb.gov.br/estabilidadefinanceira/buscanormas', null, null, 0],
-    ['cvm', 'CVM - Legislacao e Regulamentacao', 'CVM', 'BR', 'https://www.cvm.gov.br/legislacao/', null, null, 0],
-    ['susep', 'SUSEP - Normas', 'SUSEP', 'BR', 'https://www.susep.gov.br/menu/informacoes-ao-mercado/normas', null, null, 0],
-    ['cmf', 'CMF Chile - Normativa', 'CMF', 'CL', 'https://www.cmfchile.cl/portal/legislacion/615/w3-channel.html', null, null, 0],
-    ['sfc', 'SFC Colombia - Normativa', 'SFC', 'CO', 'https://www.superfinanciera.gov.co/jsp/60940', null, null, 0],
-    ['bcu', 'BCU Uruguay - Normativa', 'BCU', 'UY', 'https://www.bcu.gub.uy/Acerca-de-BCU/Normativa/', null, null, 0],
-    ['cnbv', 'CNBV Mexico - Normatividad', 'CNBV', 'MX', 'https://www.cnbv.gob.mx/Normatividad/', null, null, 0],
-    ['sbs', 'SBS Peru - Normativa', 'SBS', 'PE', 'https://www.sbs.gob.pe/normativa', null, null, 0],
-  ];
-
-  for (const s of sources) {
-    insert.run(...s);
-  }
+interface Regulation {
+  id: string;
+  regulator_id: string;
+  country_code: string;
+  title: string;
+  official_number: string;
+  year: number;
+  sector: string;
+  status: string;
+  source_url: string;
+  last_updated: string;
 }
+
+interface Provision {
+  regulation_id: string;
+  country_code: string;
+  article_ref: string;
+  title: string | null;
+  content: string;
+  topic: string | null;
+}
+
+interface CyberReq {
+  country_code: string;
+  regulator_id: string;
+  sector: string;
+  requirement: string;
+  legal_basis: string;
+  category: string;
+}
+
+interface ReportingReq {
+  country_code: string;
+  regulator_id: string;
+  event_type: string;
+  timeline: string;
+  channel: string;
+  penalties: string;
+}
+
+interface OutsourcingRule {
+  country_code: string;
+  regulator_id: string;
+  rule_type: string;
+  description: string;
+  legal_basis: string;
+}
+
+interface OpenBankingRule {
+  country_code: string;
+  framework_name: string;
+  description: string;
+  api_standards: string;
+  data_sharing_rules: string;
+  legal_basis: string;
+}
+
+interface Source {
+  id: string;
+  full_name: string;
+  authority: string;
+  jurisdiction: string;
+  source_url: string;
+  last_fetched: string | null;
+  last_updated: string | null;
+  item_count: number;
+}
+
+// ---------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------
 
 function main(): void {
   const outputPath = getOutputPath();
-  console.log(`Building database at: ${outputPath}`);
+  const today = new Date().toISOString().split('T')[0]!;
 
+  console.log('=== LATAM Financial Regulations MCP — Database Build ===\n');
+  console.log(`Output: ${outputPath}`);
+
+  // Ensure data directory exists
   mkdirSync(dirname(outputPath), { recursive: true });
+
+  // Remove existing database
+  if (existsSync(outputPath)) {
+    unlinkSync(outputPath);
+    console.log('Removed existing database.');
+  }
 
   const db = new Database(outputPath);
 
   db.exec('PRAGMA journal_mode = WAL');
   db.exec('PRAGMA foreign_keys = ON');
 
+  // 1. Schema
   buildSchema(db);
-  seedRegulators(db);
-  seedSources(db);
+  console.log('Schema created.');
 
-  // Counts
-  const regulators = db.prepare('SELECT COUNT(*) AS cnt FROM regulators').get() as { cnt: number };
-  const sources = db.prepare('SELECT COUNT(*) AS cnt FROM sources').get() as { cnt: number };
+  // 2. Regulators
+  const regulators = loadJson<Regulator[]>('regulators.json');
+  const insertRegulator = db.prepare(
+    'INSERT OR IGNORE INTO regulators (id, country_code, name, full_name, sector, website) VALUES (?, ?, ?, ?, ?, ?)',
+  );
+  for (const r of regulators) {
+    insertRegulator.run(r.id, r.country_code, r.name, r.full_name, r.sector, r.website);
+  }
+  console.log(`Seeded ${regulators.length} regulators.`);
 
-  console.log(`Schema created.`);
-  console.log(`Seeded ${regulators.cnt} regulators.`);
-  console.log(`Seeded ${sources.cnt} sources.`);
-  console.log(`Database ready: ${outputPath}`);
+  // 3. Sources
+  const sources = loadJson<Source[]>('sources.json');
+  const insertSource = db.prepare(
+    'INSERT OR IGNORE INTO sources (id, full_name, authority, jurisdiction, source_url, last_fetched, last_updated, item_count) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
+  );
+  for (const s of sources) {
+    insertSource.run(s.id, s.full_name, s.authority, s.jurisdiction, s.source_url, s.last_fetched, s.last_updated, s.item_count);
+  }
+  console.log(`Seeded ${sources.length} sources.`);
 
+  // 4. Regulations
+  const regulations = loadJson<Regulation[]>('regulations.json');
+  const insertRegulation = db.prepare(
+    'INSERT OR IGNORE INTO regulations (id, regulator_id, country_code, title, official_number, year, sector, status, source_url, last_updated) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+  );
+  for (const reg of regulations) {
+    insertRegulation.run(reg.id, reg.regulator_id, reg.country_code, reg.title, reg.official_number, reg.year, reg.sector, reg.status, reg.source_url, reg.last_updated);
+  }
+  console.log(`Seeded ${regulations.length} regulations.`);
+
+  // 5. Provisions
+  const provisions = loadJson<Provision[]>('provisions.json');
+  const insertProvision = db.prepare(
+    'INSERT OR IGNORE INTO provisions (regulation_id, country_code, article_ref, title, content, topic) VALUES (?, ?, ?, ?, ?, ?)',
+  );
+  for (const p of provisions) {
+    insertProvision.run(p.regulation_id, p.country_code, p.article_ref, p.title, p.content, p.topic);
+  }
+  console.log(`Seeded ${provisions.length} provisions.`);
+
+  // 6. Cybersecurity requirements
+  const cyberReqs = loadJson<CyberReq[]>('cybersecurity_requirements.json');
+  const insertCyber = db.prepare(
+    'INSERT INTO cybersecurity_requirements (country_code, regulator_id, sector, requirement, legal_basis, category) VALUES (?, ?, ?, ?, ?, ?)',
+  );
+  for (const cr of cyberReqs) {
+    insertCyber.run(cr.country_code, cr.regulator_id, cr.sector, cr.requirement, cr.legal_basis, cr.category);
+  }
+  console.log(`Seeded ${cyberReqs.length} cybersecurity requirements.`);
+
+  // 7. Reporting requirements
+  const reportingReqs = loadJson<ReportingReq[]>('reporting_requirements.json');
+  const insertReporting = db.prepare(
+    'INSERT INTO reporting_requirements (country_code, regulator_id, event_type, timeline, channel, penalties) VALUES (?, ?, ?, ?, ?, ?)',
+  );
+  for (const rr of reportingReqs) {
+    insertReporting.run(rr.country_code, rr.regulator_id, rr.event_type, rr.timeline, rr.channel, rr.penalties);
+  }
+  console.log(`Seeded ${reportingReqs.length} reporting requirements.`);
+
+  // 8. Outsourcing rules
+  const outsourcingRules = loadJson<OutsourcingRule[]>('outsourcing_rules.json');
+  const insertOutsourcing = db.prepare(
+    'INSERT INTO outsourcing_rules (country_code, regulator_id, rule_type, description, legal_basis) VALUES (?, ?, ?, ?, ?)',
+  );
+  for (const o of outsourcingRules) {
+    insertOutsourcing.run(o.country_code, o.regulator_id, o.rule_type, o.description, o.legal_basis);
+  }
+  console.log(`Seeded ${outsourcingRules.length} outsourcing rules.`);
+
+  // 9. Open banking rules
+  const openBankingRules = loadJson<OpenBankingRule[]>('open_banking_rules.json');
+  const insertOpenBanking = db.prepare(
+    'INSERT INTO open_banking_rules (country_code, framework_name, description, api_standards, data_sharing_rules, legal_basis) VALUES (?, ?, ?, ?, ?, ?)',
+  );
+  for (const ob of openBankingRules) {
+    insertOpenBanking.run(ob.country_code, ob.framework_name, ob.description, ob.api_standards, ob.data_sharing_rules, ob.legal_basis);
+  }
+  console.log(`Seeded ${openBankingRules.length} open banking rules.`);
+
+  // 10. Update source item counts
+  const countByRegulator = db.prepare(`
+    SELECT r.regulator_id, COUNT(*) AS cnt
+    FROM provisions p
+    JOIN regulations r ON r.id = p.regulation_id
+    GROUP BY r.regulator_id
+  `).all() as Array<{ regulator_id: string; cnt: number }>;
+
+  const regulatorToSource: Record<string, string> = {
+    BACEN: 'bacen',
+    CVM: 'cvm',
+    SUSEP: 'susep',
+    CMF: 'cmf',
+    SFC: 'sfc',
+    BCU: 'bcu',
+    CNBV: 'cnbv',
+    SBS: 'sbs',
+  };
+
+  const updateSource = db.prepare(
+    'UPDATE sources SET item_count = ?, last_fetched = ?, last_updated = ? WHERE id = ?',
+  );
+  for (const row of countByRegulator) {
+    const sourceId = regulatorToSource[row.regulator_id];
+    if (sourceId) {
+      updateSource.run(row.cnt, today, today, sourceId);
+    }
+  }
+  console.log('Updated source item counts.');
+
+  // 11. Rebuild FTS index
+  db.exec(`INSERT INTO provisions_fts(provisions_fts) VALUES('rebuild')`);
+  console.log('FTS5 index rebuilt.');
+
+  // 12. Metadata
+  const insertMeta = db.prepare('INSERT OR REPLACE INTO db_metadata (key, value) VALUES (?, ?)');
+  insertMeta.run('tier', 'free');
+  insertMeta.run('schema_version', '1.0');
+  insertMeta.run('domain', 'financial-regulation');
+  insertMeta.run('region', 'latam');
+  insertMeta.run('record_count', String(provisions.length));
+  insertMeta.run('build_date', today);
+  insertMeta.run('regulators', String(regulators.length));
+  insertMeta.run('regulations', String(regulations.length));
+  insertMeta.run('cybersecurity_requirements', String(cyberReqs.length));
+  insertMeta.run('reporting_requirements', String(reportingReqs.length));
+  insertMeta.run('outsourcing_rules', String(outsourcingRules.length));
+  insertMeta.run('open_banking_rules', String(openBankingRules.length));
+  console.log('Metadata inserted.');
+
+  // 13. Set journal mode to DELETE for WASM compatibility, then VACUUM
+  db.pragma('journal_mode = DELETE');
+  db.exec('VACUUM');
   db.close();
+
+  // Final report
+  const dbSize = statSync(outputPath).size;
+  const dbSizeMB = (dbSize / 1024 / 1024).toFixed(2);
+
+  console.log('\n=== Build Complete ===');
+  console.log(`Regulators:          ${regulators.length}`);
+  console.log(`Sources:             ${sources.length}`);
+  console.log(`Regulations:         ${regulations.length}`);
+  console.log(`Provisions:          ${provisions.length}`);
+  console.log(`Cyber Requirements:  ${cyberReqs.length}`);
+  console.log(`Reporting Reqs:      ${reportingReqs.length}`);
+  console.log(`Outsourcing Rules:   ${outsourcingRules.length}`);
+  console.log(`Open Banking Rules:  ${openBankingRules.length}`);
+  console.log(`Database Size:       ${dbSizeMB} MB`);
+  console.log(`Strategy:            A (Vercel Bundled)`);
+  console.log(`Build Date:          ${today}`);
 }
 
 main();
