@@ -4,20 +4,25 @@
   "generated": "2026-02-27",
   "summary": {
     "total_sources": 8,
-    "total_provisions": 0,
+    "total_provisions": 88,
+    "total_regulations": 20,
     "countries": 6,
     "regulators": 8,
-    "status": "scaffolded"
+    "cybersecurity_requirements": 45,
+    "reporting_requirements": 16,
+    "outsourcing_rules": 24,
+    "open_banking_entries": 7,
+    "status": "complete"
   },
   "sources": [
-    { "id": "br-bacen", "name": "BACEN", "country": "BR", "sector": "banking", "item_count": 0, "status": "pending", "last_refresh": null },
-    { "id": "br-cvm", "name": "CVM", "country": "BR", "sector": "securities", "item_count": 0, "status": "pending", "last_refresh": null },
-    { "id": "br-susep", "name": "SUSEP", "country": "BR", "sector": "insurance", "item_count": 0, "status": "pending", "last_refresh": null },
-    { "id": "cl-cmf", "name": "CMF", "country": "CL", "sector": "banking", "item_count": 0, "status": "pending", "last_refresh": null },
-    { "id": "co-sfc", "name": "SFC", "country": "CO", "sector": "banking", "item_count": 0, "status": "pending", "last_refresh": null },
-    { "id": "uy-bcu", "name": "BCU", "country": "UY", "sector": "banking", "item_count": 0, "status": "pending", "last_refresh": null },
-    { "id": "mx-cnbv", "name": "CNBV", "country": "MX", "sector": "banking", "item_count": 0, "status": "pending", "last_refresh": null },
-    { "id": "pe-sbs", "name": "SBS", "country": "PE", "sector": "banking", "item_count": 0, "status": "pending", "last_refresh": null }
+    { "id": "br-bacen", "name": "BACEN", "country": "BR", "sector": "banking", "item_count": 25, "status": "complete", "last_refresh": "2026-02-27" },
+    { "id": "br-cvm", "name": "CVM", "country": "BR", "sector": "securities", "item_count": 10, "status": "complete", "last_refresh": "2026-02-27" },
+    { "id": "br-susep", "name": "SUSEP", "country": "BR", "sector": "insurance", "item_count": 8, "status": "complete", "last_refresh": "2026-02-27" },
+    { "id": "cl-cmf", "name": "CMF", "country": "CL", "sector": "banking", "item_count": 12, "status": "complete", "last_refresh": "2026-02-27" },
+    { "id": "co-sfc", "name": "SFC", "country": "CO", "sector": "banking", "item_count": 10, "status": "complete", "last_refresh": "2026-02-27" },
+    { "id": "uy-bcu", "name": "BCU", "country": "UY", "sector": "banking", "item_count": 8, "status": "complete", "last_refresh": "2026-02-27" },
+    { "id": "mx-cnbv", "name": "CNBV", "country": "MX", "sector": "banking", "item_count": 8, "status": "complete", "last_refresh": "2026-02-27" },
+    { "id": "pe-sbs", "name": "SBS", "country": "PE", "sector": "banking", "item_count": 7, "status": "complete", "last_refresh": "2026-02-27" }
   ],
   "gaps": [
     { "id": "gap-1", "description": "State-level financial regulations not covered", "impact": "low", "planned": false },
