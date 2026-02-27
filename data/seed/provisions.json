@@ -1,0 +1,706 @@
+[
+  {
+    "regulation_id": "bacen-res-cmn-4893",
+    "country_code": "BR",
+    "article_ref": "art-1",
+    "title": "Objeto",
+    "content": "Esta Resolução dispõe sobre a política de segurança cibernética e sobre os requisitos para a contratação de serviços de processamento e armazenamento de dados e de computação em nuvem a serem observados pelas instituições autorizadas a funcionar pelo Banco Central do Brasil.",
+    "topic": "scope"
+  },
+  {
+    "regulation_id": "bacen-res-cmn-4893",
+    "country_code": "BR",
+    "article_ref": "art-2",
+    "title": "Política de segurança cibernética",
+    "content": "As instituições referidas no art. 1º devem implementar e manter política de segurança cibernética formulada com base em princípios e diretrizes que busquem assegurar a confidencialidade, a integridade e a disponibilidade dos dados e dos sistemas de informação utilizados.",
+    "topic": "cybersecurity_policy"
+  },
+  {
+    "regulation_id": "bacen-res-cmn-4893",
+    "country_code": "BR",
+    "article_ref": "art-3",
+    "title": "Requisitos mínimos da política",
+    "content": "A política de segurança cibernética deve contemplar, no mínimo: I - os objetivos de segurança cibernética da instituição; II - os procedimentos e os controles adotados para reduzir a vulnerabilidade da instituição a incidentes e atender aos demais objetivos de segurança cibernética; III - os controles específicos que busquem garantir a segurança das informações sensíveis; IV - o registro, a análise da causa e do impacto, bem como o controle dos efeitos de incidentes relevantes.",
+    "topic": "cybersecurity_policy"
+  },
+  {
+    "regulation_id": "bacen-res-cmn-4893",
+    "country_code": "BR",
+    "article_ref": "art-6",
+    "title": "Plano de ação e de resposta a incidentes",
+    "content": "As instituições referidas no art. 1º devem estabelecer plano de ação e de resposta a incidentes que contemple, no mínimo: I - as ações a serem desenvolvidas pela instituição para adequar suas estruturas organizacional e operacional aos princípios e às diretrizes da política de segurança cibernética; II - as rotinas, os procedimentos, os controles e as tecnologias a serem utilizados na prevenção e na resposta a incidentes.",
+    "topic": "incident_response"
+  },
+  {
+    "regulation_id": "bacen-res-cmn-4893",
+    "country_code": "BR",
+    "article_ref": "art-7",
+    "title": "Comunicação de incidentes relevantes",
+    "content": "As instituições referidas no art. 1º devem comunicar ao Banco Central do Brasil as ocorrências de incidentes relevantes e as interrupções dos serviços relevantes, no prazo máximo de dez dias úteis a contar da data de ocorrência ou da data em que a instituição tiver conhecimento do incidente.",
+    "topic": "incident_notification"
+  },
+  {
+    "regulation_id": "bacen-res-cmn-4893",
+    "country_code": "BR",
+    "article_ref": "art-9",
+    "title": "Diretor responsável",
+    "content": "As instituições referidas no art. 1º devem designar diretor responsável pela política de segurança cibernética e pela execução do plano de ação e de resposta a incidentes. O diretor mencionado pode desempenhar outras funções na instituição, desde que não haja conflito de interesses.",
+    "topic": "governance"
+  },
+  {
+    "regulation_id": "bacen-res-cmn-4893",
+    "country_code": "BR",
+    "article_ref": "art-11",
+    "title": "Relatório anual",
+    "content": "As instituições referidas no art. 1º devem elaborar relatório anual sobre a implementação do plano de ação e de resposta a incidentes, abrangendo: I - a efetividade da implementação das ações; II - o resumo dos resultados obtidos na implementação das rotinas, dos procedimentos, dos controles e das tecnologias voltados à prevenção e à resposta a incidentes; III - os incidentes relevantes ocorridos no período.",
+    "topic": "reporting"
+  },
+  {
+    "regulation_id": "bacen-res-cmn-4893",
+    "country_code": "BR",
+    "article_ref": "art-12",
+    "title": "Programa de capacitação",
+    "content": "As instituições referidas no art. 1º devem assegurar que suas políticas de segurança cibernética sejam amplamente divulgadas aos funcionários, prestadores de serviço e parceiros de negócios, mediante programa de capacitação e de avaliação periódica de pessoal.",
+    "topic": "awareness_training"
+  },
+  {
+    "regulation_id": "bacen-res-bcb-85",
+    "country_code": "BR",
+    "article_ref": "art-1",
+    "title": "Objeto e âmbito de aplicação",
+    "content": "Esta Resolução dispõe sobre os requisitos para a contratação de serviços de processamento e armazenamento de dados e de computação em nuvem pelas instituições autorizadas a funcionar pelo Banco Central do Brasil. As instituições devem comunicar previamente ao Banco Central a contratação desses serviços.",
+    "topic": "cloud_outsourcing"
+  },
+  {
+    "regulation_id": "bacen-res-bcb-85",
+    "country_code": "BR",
+    "article_ref": "art-3",
+    "title": "Avaliação de risco na contratação de nuvem",
+    "content": "Previamente à contratação dos serviços mencionados no art. 1º, a instituição deve adotar procedimentos que contemplem: I - a adoção de práticas de governança corporativa e de gestão proporcionais à relevância do serviço a ser contratado e aos riscos a que estejam expostas; II - a verificação da capacidade do prestador de serviços de assegurar o cumprimento da legislação e da regulamentação em vigor.",
+    "topic": "third_party_risk"
+  },
+  {
+    "regulation_id": "bacen-res-bcb-85",
+    "country_code": "BR",
+    "article_ref": "art-5",
+    "title": "Requisitos contratuais para serviços em nuvem",
+    "content": "O contrato para prestação dos serviços mencionados no art. 1º deve prever: I - a indicação dos países e da região em cada país onde os serviços poderão ser prestados e os dados poderão ser armazenados; II - a adoção de controles que garantam a segregação dos dados e dos controles de acesso para proteção das informações dos clientes; III - a obrigação do prestador de manter a confidencialidade dos dados processados ou armazenados.",
+    "topic": "cloud_outsourcing"
+  },
+  {
+    "regulation_id": "bacen-res-bcb-85",
+    "country_code": "BR",
+    "article_ref": "art-8",
+    "title": "Comunicação prévia ao BCB",
+    "content": "A instituição deve comunicar ao Banco Central do Brasil a contratação dos serviços mencionados no art. 1º com antecedência mínima de sessenta dias do início da prestação do serviço, informando: I - a denominação da empresa contratada; II - os serviços contratados; III - a indicação dos países e das regiões em cada país onde os dados serão armazenados.",
+    "topic": "regulatory_notification"
+  },
+  {
+    "regulation_id": "bacen-res-bcb-85",
+    "country_code": "BR",
+    "article_ref": "art-10",
+    "title": "Tratamento de dados no exterior",
+    "content": "A contratação de serviços de processamento e armazenamento de dados e de computação em nuvem prestados no exterior deve observar as mesmas exigências desta Resolução, devendo a instituição assegurar que o Banco Central tenha acesso aos dados, às informações e à documentação.",
+    "topic": "data_sovereignty"
+  },
+  {
+    "regulation_id": "bacen-res-conj-1",
+    "country_code": "BR",
+    "article_ref": "art-1",
+    "title": "Objeto do Open Finance",
+    "content": "Esta Resolução Conjunta dispõe sobre a implementação do Sistema Financeiro Aberto (Open Finance), definido como o compartilhamento padronizado de dados e serviços por meio de abertura e integração de sistemas no âmbito das instituições financeiras autorizadas a funcionar pelo Banco Central do Brasil.",
+    "topic": "open_finance"
+  },
+  {
+    "regulation_id": "bacen-res-conj-1",
+    "country_code": "BR",
+    "article_ref": "art-5",
+    "title": "Consentimento para compartilhamento de dados",
+    "content": "O compartilhamento de dados de cadastro e de transações de clientes no âmbito do Open Finance requer o consentimento do cliente, observando: I - o consentimento deve ser obtido por meio eletrônico; II - deve ser específico quanto às finalidades, aos dados compartilhados e ao prazo de validade; III - o consentimento tem prazo máximo de doze meses, podendo ser renovado.",
+    "topic": "data_sharing"
+  },
+  {
+    "regulation_id": "bacen-res-conj-1",
+    "country_code": "BR",
+    "article_ref": "art-9",
+    "title": "Segurança no compartilhamento de dados",
+    "content": "As instituições participantes do Open Finance devem implementar mecanismos de segurança que assegurem: I - a autenticação do cliente; II - a autenticação mútua entre as instituições participantes; III - a integridade e a confidencialidade dos dados transmitidos; IV - o registro de todas as operações de compartilhamento de dados realizadas.",
+    "topic": "api_security"
+  },
+  {
+    "regulation_id": "bacen-res-conj-1",
+    "country_code": "BR",
+    "article_ref": "art-10",
+    "title": "Padrões técnicos de APIs",
+    "content": "As interfaces de programação de aplicações (APIs) utilizadas no Open Finance devem observar os padrões técnicos definidos pela estrutura de governança, incluindo: I - uso de protocolos seguros de comunicação (TLS 1.2 ou superior); II - autenticação e autorização baseadas em OAuth 2.0 e OpenID Connect; III - padrões de dados conformes à especificação do Open Finance Brasil.",
+    "topic": "api_standards"
+  },
+  {
+    "regulation_id": "bacen-res-conj-1",
+    "country_code": "BR",
+    "article_ref": "art-15",
+    "title": "Responsabilidade pelo tratamento de dados",
+    "content": "A instituição receptora dos dados compartilhados no âmbito do Open Finance é responsável pelo tratamento adequado dos dados recebidos, devendo observar a legislação de proteção de dados pessoais aplicável, em especial a Lei nº 13.709, de 14 de agosto de 2018 (LGPD).",
+    "topic": "data_protection"
+  },
+  {
+    "regulation_id": "bacen-res-bcb-1-pix",
+    "country_code": "BR",
+    "article_ref": "art-1",
+    "title": "Objeto do Pix",
+    "content": "Esta Resolução institui o arranjo de pagamentos Pix, que disciplina a prestação de serviços de pagamento relacionados às transações de pagamento instantâneo, nos termos do regulamento anexo a esta Resolução.",
+    "topic": "scope"
+  },
+  {
+    "regulation_id": "bacen-res-bcb-1-pix",
+    "country_code": "BR",
+    "article_ref": "sec-iii-art-37",
+    "title": "Requisitos de segurança do Pix",
+    "content": "Os participantes do Pix devem implementar mecanismos de segurança que contemplem: I - autenticação do usuário final para iniciação de transação Pix; II - criptografia das informações transmitidas; III - rastreabilidade das transações; IV - mecanismos antifraude, incluindo limites de valor por período e por transação; V - avaliação de risco em tempo real.",
+    "topic": "payment_security"
+  },
+  {
+    "regulation_id": "bacen-res-bcb-1-pix",
+    "country_code": "BR",
+    "article_ref": "sec-iii-art-39",
+    "title": "Notificação de incidentes Pix",
+    "content": "Os participantes do Pix devem comunicar ao Banco Central do Brasil, sem demora injustificada, qualquer incidente de segurança relevante que afete a disponibilidade, a integridade ou a confidencialidade dos dados e das transações realizadas no âmbito do Pix, observando os prazos estabelecidos na regulamentação específica.",
+    "topic": "incident_notification"
+  },
+  {
+    "regulation_id": "bacen-res-bcb-1-pix",
+    "country_code": "BR",
+    "article_ref": "sec-iii-art-40",
+    "title": "Mecanismo Especial de Devolução (MED)",
+    "content": "O Mecanismo Especial de Devolução (MED) permite a devolução de valores em casos de suspeita de fraude, mediante bloqueio cautelar dos recursos na conta do recebedor por até 72 horas, com posterior análise e notificação às partes envolvidas.",
+    "topic": "fraud_prevention"
+  },
+  {
+    "regulation_id": "bacen-res-bcb-1-pix",
+    "country_code": "BR",
+    "article_ref": "sec-v-art-55",
+    "title": "Gestão de dados pessoais no Pix",
+    "content": "O tratamento de dados pessoais no âmbito do Pix deve observar a legislação de proteção de dados pessoais vigente, em especial a Lei nº 13.709, de 2018 (LGPD), cabendo aos participantes implementar medidas técnicas e organizacionais adequadas para garantir a segurança dos dados pessoais dos usuários.",
+    "topic": "data_protection"
+  },
+  {
+    "regulation_id": "cvm-instrucao-505",
+    "country_code": "BR",
+    "article_ref": "art-1",
+    "title": "Âmbito de aplicação",
+    "content": "Esta Instrução dispõe sobre as normas e procedimentos a serem observados nas operações realizadas em bolsas de valores e de mercadorias e futuros, incluindo controles internos e gestão de risco operacional dos intermediários.",
+    "topic": "scope"
+  },
+  {
+    "regulation_id": "cvm-instrucao-505",
+    "country_code": "BR",
+    "article_ref": "art-35",
+    "title": "Controles internos e risco operacional",
+    "content": "Os intermediários devem manter estrutura de controles internos e gestão de risco operacional que contemple: I - identificação e avaliação dos riscos operacionais inerentes às suas atividades; II - procedimentos de controle e monitoramento dos riscos; III - planos de contingência e de continuidade de negócios; IV - revisão periódica da estrutura de controles internos.",
+    "topic": "operational_risk"
+  },
+  {
+    "regulation_id": "cvm-instrucao-505",
+    "country_code": "BR",
+    "article_ref": "art-37",
+    "title": "Segurança dos sistemas",
+    "content": "Os intermediários devem adotar procedimentos de segurança da informação que garantam a integridade, a confidencialidade e a disponibilidade dos sistemas utilizados nas operações, incluindo: I - controles de acesso lógico e físico; II - gestão de vulnerabilidades; III - monitoramento de eventos de segurança; IV - testes periódicos de segurança.",
+    "topic": "information_security"
+  },
+  {
+    "regulation_id": "cvm-res-35",
+    "country_code": "BR",
+    "article_ref": "art-1",
+    "title": "Objeto e âmbito de aplicação",
+    "content": "Esta Resolução dispõe sobre a política de segurança cibernética e sobre os requisitos para a contratação de serviços de processamento e armazenamento de dados e de computação em nuvem, a serem observados pelos participantes do mercado de valores mobiliários.",
+    "topic": "scope"
+  },
+  {
+    "regulation_id": "cvm-res-35",
+    "country_code": "BR",
+    "article_ref": "art-3",
+    "title": "Política de segurança cibernética",
+    "content": "A política de segurança cibernética deve ser compatível com o porte, o perfil de risco e o modelo de negócio da instituição e deve prever, no mínimo: I - objetivos de segurança cibernética; II - procedimentos e controles para prevenção e tratamento de incidentes; III - controles para proteção de dados sensíveis; IV - mecanismos de disseminação da cultura de segurança cibernética.",
+    "topic": "cybersecurity_policy"
+  },
+  {
+    "regulation_id": "cvm-res-35",
+    "country_code": "BR",
+    "article_ref": "art-7",
+    "title": "Comunicação de incidentes à CVM",
+    "content": "Os participantes devem comunicar à CVM as ocorrências de incidentes relevantes de segurança cibernética, incluindo aqueles que resultem na interrupção de serviços relevantes ou no comprometimento de dados de investidores, no prazo de cinco dias úteis a contar da detecção do incidente.",
+    "topic": "incident_notification"
+  },
+  {
+    "regulation_id": "cvm-res-35",
+    "country_code": "BR",
+    "article_ref": "art-10",
+    "title": "Contratação de serviços de nuvem",
+    "content": "A contratação de serviços de processamento e armazenamento de dados e de computação em nuvem deve observar: I - avaliação prévia dos riscos envolvidos; II - procedimentos que assegurem a proteção dos dados dos investidores; III - a capacidade de a CVM acessar os dados, as informações e os sistemas necessários para o exercício de suas atribuições legais.",
+    "topic": "cloud_outsourcing"
+  },
+  {
+    "regulation_id": "susep-circ-638",
+    "country_code": "BR",
+    "article_ref": "art-1",
+    "title": "Objeto e aplicabilidade",
+    "content": "Esta Circular dispõe sobre os requisitos de segurança cibernética a serem observados pelas sociedades seguradoras, entidades abertas de previdência complementar, sociedades de capitalização e resseguradores locais.",
+    "topic": "scope"
+  },
+  {
+    "regulation_id": "susep-circ-638",
+    "country_code": "BR",
+    "article_ref": "art-3",
+    "title": "Política de segurança cibernética",
+    "content": "As supervisionadas devem implementar e manter política de segurança cibernética compatível com seu porte, natureza e complexidade das operações, que contemple: I - objetivos de segurança cibernética; II - procedimentos e controles adotados para redução da vulnerabilidade a incidentes; III - controles específicos para proteção de dados sensíveis, incluindo dados de segurados e beneficiários.",
+    "topic": "cybersecurity_policy"
+  },
+  {
+    "regulation_id": "susep-circ-638",
+    "country_code": "BR",
+    "article_ref": "art-6",
+    "title": "Plano de resposta a incidentes cibernéticos",
+    "content": "As supervisionadas devem elaborar plano de resposta a incidentes cibernéticos que contemple: I - definição de papéis e responsabilidades; II - procedimentos de detecção e contenção de incidentes; III - procedimentos de comunicação interna e externa; IV - procedimentos de recuperação; V - análise de causa raiz e implementação de melhorias.",
+    "topic": "incident_response"
+  },
+  {
+    "regulation_id": "susep-circ-638",
+    "country_code": "BR",
+    "article_ref": "art-8",
+    "title": "Comunicação de incidentes à SUSEP",
+    "content": "As supervisionadas devem comunicar à SUSEP os incidentes relevantes de segurança cibernética no prazo de cinco dias úteis contados da detecção, incluindo: I - descrição do incidente; II - impacto sobre os segurados e beneficiários; III - medidas adotadas para contenção e mitigação; IV - plano de ação para prevenção de recorrência.",
+    "topic": "incident_notification"
+  },
+  {
+    "regulation_id": "susep-circ-638",
+    "country_code": "BR",
+    "article_ref": "art-11",
+    "title": "Terceirização de serviços de tecnologia",
+    "content": "A contratação de serviços de processamento, armazenamento de dados e computação em nuvem por terceiros deve ser precedida de avaliação de riscos e deve observar: I - a existência de controles que garantam a segregação e a proteção dos dados; II - a capacidade da SUSEP de acessar os dados e as informações para fins de supervisão; III - a comunicação prévia à SUSEP sobre a contratação.",
+    "topic": "cloud_outsourcing"
+  },
+  {
+    "regulation_id": "cmf-ncg-311",
+    "country_code": "CL",
+    "article_ref": "art-1",
+    "title": "Objetivo y alcance",
+    "content": "La presente Norma de Carácter General establece los requerimientos mínimos que las entidades fiscalizadas por la Comisión para el Mercado Financiero deben cumplir en materia de gestión del riesgo operacional, incluyendo la gestión de la seguridad de la información y ciberseguridad.",
+    "topic": "scope"
+  },
+  {
+    "regulation_id": "cmf-ncg-311",
+    "country_code": "CL",
+    "article_ref": "art-3",
+    "title": "Política de seguridad de la información",
+    "content": "Las entidades fiscalizadas deben contar con una política de seguridad de la información aprobada por el directorio, que contemple: I - clasificación de la información según su nivel de sensibilidad; II - controles de acceso a los sistemas y datos; III - gestión de vulnerabilidades; IV - respuesta a incidentes de seguridad; V - capacitación del personal en materia de seguridad.",
+    "topic": "cybersecurity_policy"
+  },
+  {
+    "regulation_id": "cmf-ncg-311",
+    "country_code": "CL",
+    "article_ref": "art-5",
+    "title": "Gestión del riesgo de ciberseguridad",
+    "content": "Las entidades deben implementar un marco de gestión del riesgo de ciberseguridad que incluya: I - identificación de activos críticos; II - evaluación periódica de amenazas y vulnerabilidades; III - implementación de controles de seguridad proporcionados al nivel de riesgo; IV - monitoreo continuo de eventos de seguridad; V - pruebas periódicas de penetración y evaluación de vulnerabilidades.",
+    "topic": "risk_management"
+  },
+  {
+    "regulation_id": "cmf-ncg-311",
+    "country_code": "CL",
+    "article_ref": "art-8",
+    "title": "Notificación de incidentes",
+    "content": "Las entidades fiscalizadas deben informar a la CMF, dentro de las 24 horas siguientes a su detección, todo incidente de ciberseguridad que pueda afectar la continuidad operacional, la integridad de los datos o la seguridad de los clientes. La notificación debe incluir una descripción del incidente, su impacto estimado y las medidas adoptadas.",
+    "topic": "incident_notification"
+  },
+  {
+    "regulation_id": "cmf-ncg-311",
+    "country_code": "CL",
+    "article_ref": "art-10",
+    "title": "Gestión de terceros y proveedores",
+    "content": "Las entidades deben establecer procedimientos para la gestión de riesgos asociados a la externalización de servicios, incluyendo: I - evaluación previa de los proveedores de servicios tecnológicos; II - cláusulas contractuales que aseguren niveles adecuados de seguridad; III - derecho de auditoría; IV - planes de continuidad y salida.",
+    "topic": "third_party_risk"
+  },
+  {
+    "regulation_id": "cmf-ncg-311",
+    "country_code": "CL",
+    "article_ref": "art-12",
+    "title": "Cifrado y protección de datos",
+    "content": "Las entidades deben implementar mecanismos de cifrado para la protección de datos sensibles, tanto en tránsito como en reposo, utilizando algoritmos y protocolos reconocidos por estándares internacionales. Los datos de clientes deben ser cifrados con un nivel de seguridad proporcional a su clasificación de sensibilidad.",
+    "topic": "data_encryption"
+  },
+  {
+    "regulation_id": "cmf-ran-20-10",
+    "country_code": "CL",
+    "article_ref": "cap-i",
+    "title": "Disposiciones generales — Gestión del riesgo operacional",
+    "content": "Los bancos deben contar con un marco integral de gestión del riesgo operacional que considere: I - la identificación y evaluación de los riesgos operacionales, incluyendo los asociados a tecnología y ciberseguridad; II - la implementación de controles internos adecuados; III - el monitoreo y reporte de eventos de riesgo operacional; IV - la revisión periódica del marco por parte del directorio.",
+    "topic": "operational_risk"
+  },
+  {
+    "regulation_id": "cmf-ran-20-10",
+    "country_code": "CL",
+    "article_ref": "cap-iii-sec-2",
+    "title": "Continuidad de negocio y recuperación ante desastres",
+    "content": "Los bancos deben mantener planes de continuidad de negocio y de recuperación ante desastres que contemplen: I - escenarios de interrupción de servicios críticos; II - procedimientos de respaldo y recuperación de datos; III - sitios alternativos de operación; IV - pruebas periódicas de los planes, al menos una vez al año; V - actualización de los planes ante cambios significativos en la infraestructura.",
+    "topic": "business_continuity"
+  },
+  {
+    "regulation_id": "cmf-ley-21521",
+    "country_code": "CL",
+    "article_ref": "art-1",
+    "title": "Objeto de la Ley Fintech",
+    "content": "La presente ley tiene por objeto regular la prestación de servicios financieros a través de medios tecnológicos, promoviendo la competencia e inclusión financiera, estableciendo un marco regulatorio para las instituciones de tecnología financiera bajo la supervisión de la Comisión para el Mercado Financiero.",
+    "topic": "scope"
+  },
+  {
+    "regulation_id": "cmf-ley-21521",
+    "country_code": "CL",
+    "article_ref": "art-12",
+    "title": "Sistema de finanzas abiertas",
+    "content": "Se establece un sistema de finanzas abiertas que permite el intercambio de información financiera de clientes entre proveedores de servicios financieros, previo consentimiento expreso del titular de los datos, mediante interfaces de programación de aplicaciones (APIs) estandarizadas y seguras.",
+    "topic": "open_finance"
+  },
+  {
+    "regulation_id": "cmf-ley-21521",
+    "country_code": "CL",
+    "article_ref": "art-18",
+    "title": "Requisitos de seguridad para fintech",
+    "content": "Las instituciones de tecnología financiera deben implementar medidas de seguridad de la información y ciberseguridad que sean proporcionadas a la naturaleza y complejidad de sus operaciones, incluyendo: I - políticas de seguridad de la información; II - controles de acceso y autenticación; III - cifrado de datos sensibles; IV - gestión de incidentes de seguridad.",
+    "topic": "cybersecurity_policy"
+  },
+  {
+    "regulation_id": "sfc-ce-007-2018",
+    "country_code": "CO",
+    "article_ref": "num-1",
+    "title": "Ámbito de aplicación",
+    "content": "La presente Circular establece los requerimientos mínimos para la gestión del riesgo de ciberseguridad que deben observar las entidades vigiladas por la Superintendencia Financiera de Colombia, incluyendo establecimientos bancarios, compañías de financiamiento, cooperativas financieras, sociedades fiduciarias, administradoras de fondos de pensiones y cesantías, y sociedades comisionistas de bolsa.",
+    "topic": "scope"
+  },
+  {
+    "regulation_id": "sfc-ce-007-2018",
+    "country_code": "CO",
+    "article_ref": "num-3",
+    "title": "Unidad de gestión de riesgo de ciberseguridad",
+    "content": "Las entidades vigiladas deben contar con una unidad especializada de gestión de riesgo de ciberseguridad, o en su defecto, asignar estas funciones a un área específica de la entidad. Esta unidad debe contar con personal especializado y reportar directamente a la alta dirección.",
+    "topic": "governance"
+  },
+  {
+    "regulation_id": "sfc-ce-007-2018",
+    "country_code": "CO",
+    "article_ref": "num-4",
+    "title": "Marco de gestión del riesgo de ciberseguridad",
+    "content": "Las entidades vigiladas deben implementar un marco de gestión del riesgo de ciberseguridad que contemple: I - identificación y clasificación de activos de información; II - evaluación de amenazas y vulnerabilidades; III - implementación de controles preventivos, detectivos y correctivos; IV - monitoreo continuo del ambiente de ciberseguridad; V - pruebas periódicas de seguridad, incluyendo pruebas de penetración al menos una vez al año.",
+    "topic": "risk_management"
+  },
+  {
+    "regulation_id": "sfc-ce-007-2018",
+    "country_code": "CO",
+    "article_ref": "num-6",
+    "title": "Reporte de incidentes de ciberseguridad",
+    "content": "Las entidades vigiladas deben reportar a la Superintendencia Financiera los incidentes de ciberseguridad significativos dentro de las veinticuatro (24) horas siguientes a su detección, utilizando el formato establecido por la SFC. El reporte debe incluir: I - tipo y descripción del incidente; II - impacto sobre los servicios y clientes; III - acciones de contención adoptadas; IV - cronograma estimado de resolución.",
+    "topic": "incident_notification"
+  },
+  {
+    "regulation_id": "sfc-ce-007-2018",
+    "country_code": "CO",
+    "article_ref": "num-8",
+    "title": "Gestión de vulnerabilidades",
+    "content": "Las entidades vigiladas deben implementar un programa de gestión de vulnerabilidades que incluya: I - escaneo periódico de vulnerabilidades en todos los sistemas expuestos; II - análisis y priorización de vulnerabilidades identificadas; III - remediación oportuna según la criticidad de la vulnerabilidad; IV - pruebas de penetración al menos anualmente realizadas por un tercero independiente.",
+    "topic": "vulnerability_management"
+  },
+  {
+    "regulation_id": "sfc-ce-007-2018",
+    "country_code": "CO",
+    "article_ref": "num-10",
+    "title": "Capacitación y concientización",
+    "content": "Las entidades vigiladas deben implementar programas de capacitación y concientización en materia de ciberseguridad dirigidos a todos los empleados, incluyendo: I - capacitación periódica sobre amenazas de ciberseguridad; II - simulacros de phishing y ataques de ingeniería social; III - capacitación especializada para el personal de TI y seguridad; IV - evaluación periódica del nivel de concientización.",
+    "topic": "awareness_training"
+  },
+  {
+    "regulation_id": "sfc-cbj-cyber",
+    "country_code": "CO",
+    "article_ref": "cap-v-art-1",
+    "title": "Disposiciones generales sobre ciberseguridad",
+    "content": "Las entidades vigiladas por la Superintendencia Financiera deben contar con políticas, procedimientos y recursos adecuados para la gestión del riesgo de ciberseguridad, los cuales deben ser aprobados por la junta directiva y revisados anualmente.",
+    "topic": "governance"
+  },
+  {
+    "regulation_id": "sfc-cbj-cyber",
+    "country_code": "CO",
+    "article_ref": "cap-v-art-3",
+    "title": "Controles de acceso",
+    "content": "Las entidades deben implementar controles de acceso que incluyan: I - autenticación multifactor para acceso a sistemas críticos; II - principio de mínimo privilegio; III - revisión periódica de permisos de acceso; IV - gestión centralizada de identidades; V - monitoreo de accesos privilegiados.",
+    "topic": "access_control"
+  },
+  {
+    "regulation_id": "sfc-cbj-cyber",
+    "country_code": "CO",
+    "article_ref": "cap-v-art-5",
+    "title": "Protección de datos de clientes",
+    "content": "Las entidades deben implementar medidas de protección de los datos de sus clientes que incluyan: I - cifrado de datos personales y financieros en tránsito y en reposo; II - controles de acceso basados en roles; III - monitoreo de acceso a datos sensibles; IV - procedimientos de destrucción segura de datos al finalizar su período de retención.",
+    "topic": "data_protection"
+  },
+  {
+    "regulation_id": "sfc-dec-1357-2018",
+    "country_code": "CO",
+    "article_ref": "art-1",
+    "title": "Objeto",
+    "content": "El presente Decreto tiene por objeto establecer las condiciones y requisitos aplicables a las actividades de financiación colaborativa (crowdfunding) y a las entidades que las desarrollen, bajo la vigilancia de la Superintendencia Financiera de Colombia.",
+    "topic": "scope"
+  },
+  {
+    "regulation_id": "sfc-dec-1357-2018",
+    "country_code": "CO",
+    "article_ref": "art-15",
+    "title": "Requisitos tecnológicos y de seguridad",
+    "content": "Las plataformas de financiación colaborativa deben cumplir con requisitos tecnológicos y de seguridad que incluyan: I - sistemas de autenticación robustos; II - cifrado de comunicaciones y datos; III - planes de continuidad de negocio; IV - gestión de incidentes de seguridad; V - auditorías periódicas de seguridad de los sistemas.",
+    "topic": "cybersecurity_policy"
+  },
+  {
+    "regulation_id": "bcu-circ-2307",
+    "country_code": "UY",
+    "article_ref": "art-1",
+    "title": "Objeto y alcance",
+    "content": "La presente Circular establece los lineamientos para la gestión del riesgo de tecnología de la información que deben observar las instituciones de intermediación financiera, las administradoras de fondos de ahorro previsional y las empresas de servicios financieros supervisadas por el Banco Central del Uruguay.",
+    "topic": "scope"
+  },
+  {
+    "regulation_id": "bcu-circ-2307",
+    "country_code": "UY",
+    "article_ref": "art-3",
+    "title": "Gobierno de tecnología de la información",
+    "content": "Las entidades supervisadas deben contar con un marco de gobierno de tecnología de la información que contemple: I - una estructura organizacional con roles y responsabilidades claramente definidos; II - políticas y procedimientos aprobados por el directorio; III - un comité de tecnología o de riesgo tecnológico; IV - asignación presupuestaria adecuada para seguridad de la información.",
+    "topic": "governance"
+  },
+  {
+    "regulation_id": "bcu-circ-2307",
+    "country_code": "UY",
+    "article_ref": "art-5",
+    "title": "Gestión de riesgos de seguridad de la información",
+    "content": "Las entidades deben implementar un proceso de gestión de riesgos de seguridad de la información que incluya: I - identificación y clasificación de activos de información; II - evaluación de amenazas y vulnerabilidades; III - determinación del nivel de riesgo residual; IV - implementación de controles proporcionados; V - monitoreo continuo y revisión periódica del análisis de riesgos.",
+    "topic": "risk_management"
+  },
+  {
+    "regulation_id": "bcu-circ-2307",
+    "country_code": "UY",
+    "article_ref": "art-8",
+    "title": "Control de accesos",
+    "content": "Las entidades supervisadas deben implementar controles de acceso lógico que incluyan: I - asignación de perfiles de acceso basados en el principio de mínimo privilegio; II - autenticación multifactor para acceso a sistemas críticos y acceso remoto; III - revisión periódica de permisos de usuario; IV - registro y monitoreo de eventos de acceso; V - procedimientos de baja inmediata para personal desvinculado.",
+    "topic": "access_control"
+  },
+  {
+    "regulation_id": "bcu-circ-2307",
+    "country_code": "UY",
+    "article_ref": "art-12",
+    "title": "Gestión de incidentes de seguridad",
+    "content": "Las entidades supervisadas deben establecer procedimientos para la gestión de incidentes de seguridad de la información que incluyan: I - detección y clasificación de incidentes; II - procedimientos de respuesta y contención; III - comunicación al BCU de incidentes significativos dentro de las 48 horas de su detección; IV - análisis post-incidente y lecciones aprendidas.",
+    "topic": "incident_response"
+  },
+  {
+    "regulation_id": "bcu-circ-2307",
+    "country_code": "UY",
+    "article_ref": "art-15",
+    "title": "Tercerización de servicios tecnológicos",
+    "content": "La tercerización de servicios de tecnología de la información debe observar: I - evaluación previa de riesgos; II - formalización contractual con cláusulas de seguridad, auditoría y confidencialidad; III - comunicación previa al BCU de la tercerización de servicios relevantes; IV - monitoreo continuo de la calidad del servicio y el cumplimiento de los controles de seguridad.",
+    "topic": "third_party_risk"
+  },
+  {
+    "regulation_id": "bcu-rnrcsf-it",
+    "country_code": "UY",
+    "article_ref": "sec-1",
+    "title": "Disposiciones generales sobre seguridad informática",
+    "content": "Las instituciones de intermediación financiera deben adoptar políticas y procedimientos de seguridad informática que aseguren la confidencialidad, integridad y disponibilidad de la información y los sistemas de información, de conformidad con los estándares internacionales reconocidos.",
+    "topic": "cybersecurity_policy"
+  },
+  {
+    "regulation_id": "bcu-rnrcsf-it",
+    "country_code": "UY",
+    "article_ref": "sec-3",
+    "title": "Cifrado de información",
+    "content": "Las entidades deben implementar mecanismos de cifrado para la protección de información sensible, incluyendo: I - cifrado de datos en tránsito mediante protocolos seguros (TLS 1.2 o superior); II - cifrado de datos en reposo para información clasificada como confidencial; III - gestión adecuada de las claves de cifrado, incluyendo su generación, almacenamiento y rotación.",
+    "topic": "data_encryption"
+  },
+  {
+    "regulation_id": "bcu-rnrcsf-it",
+    "country_code": "UY",
+    "article_ref": "sec-5",
+    "title": "Plan de continuidad del negocio tecnológico",
+    "content": "Las entidades deben contar con planes de continuidad del negocio que contemplen la recuperación de los servicios tecnológicos críticos, incluyendo: I - definición de tiempos objetivo de recuperación (RTO) y puntos objetivo de recuperación (RPO); II - respaldos de información con periodicidad adecuada; III - pruebas anuales de los planes de continuidad; IV - actualización ante cambios en la infraestructura.",
+    "topic": "business_continuity"
+  },
+  {
+    "regulation_id": "cnbv-cub-titulo-v",
+    "country_code": "MX",
+    "article_ref": "art-310",
+    "title": "Política de seguridad de la información",
+    "content": "Las instituciones de crédito deben contar con una política de seguridad de la información aprobada por el consejo de administración, que establezca los lineamientos para la clasificación, protección y uso de la información, así como la gestión de riesgos de seguridad de la información y ciberseguridad.",
+    "topic": "cybersecurity_policy"
+  },
+  {
+    "regulation_id": "cnbv-cub-titulo-v",
+    "country_code": "MX",
+    "article_ref": "art-312",
+    "title": "Control de acceso a sistemas",
+    "content": "Las instituciones de crédito deben implementar controles de acceso que contemplen: I - asignación de perfiles de acceso basados en funciones y responsabilidades; II - autenticación de al menos dos factores para acceso a sistemas críticos; III - registro y monitoreo de accesos; IV - revisión trimestral de permisos; V - procedimientos de emergencia para la revocación de accesos comprometidos.",
+    "topic": "access_control"
+  },
+  {
+    "regulation_id": "cnbv-cub-titulo-v",
+    "country_code": "MX",
+    "article_ref": "art-316",
+    "title": "Notificación de incidentes de seguridad",
+    "content": "Las instituciones de crédito deben notificar a la CNBV los incidentes de seguridad de la información relevantes dentro de las veinticuatro (24) horas siguientes a su detección. La notificación debe incluir: I - la naturaleza y alcance del incidente; II - el impacto sobre los clientes y operaciones; III - las medidas de contención implementadas; IV - el plan de remediación.",
+    "topic": "incident_notification"
+  },
+  {
+    "regulation_id": "cnbv-cub-titulo-v",
+    "country_code": "MX",
+    "article_ref": "art-318",
+    "title": "Cifrado de información sensible",
+    "content": "Las instituciones de crédito deben implementar mecanismos de cifrado para la protección de información sensible de clientes y de la propia institución, tanto en almacenamiento como en transmisión, utilizando algoritmos y longitudes de clave conformes con estándares internacionales vigentes.",
+    "topic": "data_encryption"
+  },
+  {
+    "regulation_id": "cnbv-cub-titulo-v",
+    "country_code": "MX",
+    "article_ref": "art-320",
+    "title": "Pruebas de seguridad",
+    "content": "Las instituciones de crédito deben realizar pruebas de seguridad que incluyan: I - análisis de vulnerabilidades al menos trimestralmente; II - pruebas de penetración al menos anualmente por un tercero independiente; III - evaluación de la seguridad de aplicaciones nuevas o modificadas antes de su puesta en producción; IV - simulacros de incidentes de ciberseguridad al menos semestralmente.",
+    "topic": "vulnerability_management"
+  },
+  {
+    "regulation_id": "cnbv-ley-fintech",
+    "country_code": "MX",
+    "article_ref": "art-1",
+    "title": "Objeto de la Ley",
+    "content": "La presente Ley tiene por objeto regular los servicios financieros que prestan las instituciones de tecnología financiera, así como su organización, operación y funcionamiento, promoviendo el desarrollo del sistema financiero del país a través de la innovación.",
+    "topic": "scope"
+  },
+  {
+    "regulation_id": "cnbv-ley-fintech",
+    "country_code": "MX",
+    "article_ref": "art-39",
+    "title": "Requisitos de seguridad de la información",
+    "content": "Las instituciones de tecnología financiera deben implementar medidas de seguridad de la información y ciberseguridad para proteger los recursos, los activos y la información de sus clientes, de conformidad con las disposiciones de carácter general que al efecto emita la CNBV, incluyendo controles de acceso, cifrado de datos y gestión de incidentes.",
+    "topic": "cybersecurity_policy"
+  },
+  {
+    "regulation_id": "cnbv-ley-fintech",
+    "country_code": "MX",
+    "article_ref": "art-42",
+    "title": "Servicios de activos virtuales",
+    "content": "Las instituciones de fondos de pago electrónico que operen con activos virtuales deben cumplir con requisitos adicionales de seguridad, incluyendo: I - custodia segura de activos virtuales; II - segregación de activos de clientes; III - mecanismos de protección contra pérdida o robo; IV - auditorías independientes de los controles de seguridad.",
+    "topic": "digital_assets"
+  },
+  {
+    "regulation_id": "cnbv-disp-seguridad",
+    "country_code": "MX",
+    "article_ref": "art-1",
+    "title": "Objeto",
+    "content": "Las presentes disposiciones tienen por objeto establecer los requerimientos mínimos en materia de seguridad de la información que deben observar las instituciones de crédito para proteger la confidencialidad, integridad y disponibilidad de su información y la de sus clientes.",
+    "topic": "scope"
+  },
+  {
+    "regulation_id": "cnbv-disp-seguridad",
+    "country_code": "MX",
+    "article_ref": "art-5",
+    "title": "Oficial de seguridad de la información (CISO)",
+    "content": "Las instituciones de crédito deben designar un oficial de seguridad de la información que reporte directamente al director general o a la alta dirección, responsable de: I - coordinar la implementación de la política de seguridad; II - gestionar los incidentes de seguridad; III - supervisar la evaluación periódica de riesgos; IV - presentar informes periódicos al consejo de administración.",
+    "topic": "governance"
+  },
+  {
+    "regulation_id": "cnbv-disp-seguridad",
+    "country_code": "MX",
+    "article_ref": "art-8",
+    "title": "Programa de concientización",
+    "content": "Las instituciones de crédito deben implementar un programa de concientización en seguridad de la información para todo su personal, que incluya: I - capacitación inicial y periódica sobre políticas de seguridad; II - simulacros de ataques de ingeniería social; III - evaluación del conocimiento adquirido; IV - capacitación especializada para el personal de tecnología y seguridad de la información.",
+    "topic": "awareness_training"
+  },
+  {
+    "regulation_id": "sbs-res-504-2021",
+    "country_code": "PE",
+    "article_ref": "art-1",
+    "title": "Objeto y alcance",
+    "content": "El presente Reglamento tiene por objeto establecer las disposiciones mínimas que deben cumplir las empresas supervisadas por la Superintendencia de Banca, Seguros y AFP en materia de gestión de la seguridad de la información y ciberseguridad, con el fin de asegurar la adecuada protección de la información y de los servicios financieros.",
+    "topic": "scope"
+  },
+  {
+    "regulation_id": "sbs-res-504-2021",
+    "country_code": "PE",
+    "article_ref": "art-4",
+    "title": "Sistema de gestión de seguridad de la información",
+    "content": "Las empresas deben implementar un sistema de gestión de seguridad de la información (SGSI) alineado con estándares internacionales reconocidos, que contemple: I - política de seguridad de la información; II - organización de la seguridad; III - gestión de activos de información; IV - control de accesos; V - gestión de operaciones y comunicaciones; VI - gestión de incidentes; VII - continuidad del negocio.",
+    "topic": "cybersecurity_policy"
+  },
+  {
+    "regulation_id": "sbs-res-504-2021",
+    "country_code": "PE",
+    "article_ref": "art-8",
+    "title": "Gestión de vulnerabilidades y pruebas de seguridad",
+    "content": "Las empresas deben contar con un programa de gestión de vulnerabilidades que incluya: I - escaneo periódico de vulnerabilidades; II - análisis de riesgos de las vulnerabilidades identificadas; III - remediación oportuna según su criticidad; IV - pruebas de penetración al menos anualmente; V - evaluación de seguridad de aplicaciones previo a su despliegue en producción.",
+    "topic": "vulnerability_management"
+  },
+  {
+    "regulation_id": "sbs-res-504-2021",
+    "country_code": "PE",
+    "article_ref": "art-12",
+    "title": "Reporte de incidentes de ciberseguridad",
+    "content": "Las empresas deben reportar a la SBS los incidentes de ciberseguridad significativos dentro de un plazo máximo de veinticuatro (24) horas desde su detección, incluyendo: I - descripción del incidente y su clasificación; II - impacto sobre los servicios y clientes; III - acciones de contención y remediación adoptadas; IV - cronograma de recuperación.",
+    "topic": "incident_notification"
+  },
+  {
+    "regulation_id": "sbs-res-504-2021",
+    "country_code": "PE",
+    "article_ref": "art-15",
+    "title": "Cifrado y protección de datos",
+    "content": "Las empresas deben implementar mecanismos de cifrado para la protección de la información sensible y confidencial, tanto en almacenamiento como en transmisión, utilizando algoritmos y protocolos de cifrado reconocidos internacionalmente. La gestión de claves criptográficas debe seguir prácticas de la industria.",
+    "topic": "data_encryption"
+  },
+  {
+    "regulation_id": "sbs-res-504-2021",
+    "country_code": "PE",
+    "article_ref": "art-18",
+    "title": "Capacitación y concientización",
+    "content": "Las empresas deben implementar un programa de capacitación y concientización en seguridad de la información y ciberseguridad para todo su personal, que incluya: I - inducción en materia de seguridad para nuevos empleados; II - capacitación periódica sobre amenazas vigentes; III - simulacros de phishing y ataques de ingeniería social; IV - capacitación especializada para el equipo de seguridad.",
+    "topic": "awareness_training"
+  },
+  {
+    "regulation_id": "sbs-res-504-2021",
+    "country_code": "PE",
+    "article_ref": "art-20",
+    "title": "Gestión de la ciberseguridad por la alta dirección",
+    "content": "El directorio de la empresa es responsable de aprobar la política de seguridad de la información y ciberseguridad, asignar los recursos necesarios para su implementación y recibir informes periódicos sobre el estado de la ciberseguridad, los incidentes relevantes y el avance del plan de tratamiento de riesgos.",
+    "topic": "governance"
+  },
+  {
+    "regulation_id": "sbs-res-3330-2019",
+    "country_code": "PE",
+    "article_ref": "art-1",
+    "title": "Objeto y alcance",
+    "content": "El presente Reglamento tiene por objeto establecer las condiciones y requisitos que deben cumplir las empresas supervisadas por la SBS para la contratación de servicios de computación en la nube, con el fin de gestionar adecuadamente los riesgos asociados a la tercerización de servicios tecnológicos.",
+    "topic": "scope"
+  },
+  {
+    "regulation_id": "sbs-res-3330-2019",
+    "country_code": "PE",
+    "article_ref": "art-4",
+    "title": "Evaluación previa de riesgos",
+    "content": "Previamente a la contratación de servicios de computación en la nube, las empresas deben realizar una evaluación de riesgos que considere: I - la criticidad de la información y los procesos involucrados; II - los riesgos de concentración con un mismo proveedor; III - los riesgos asociados a la localización geográfica de los datos; IV - la capacidad del proveedor para cumplir con los requerimientos regulatorios.",
+    "topic": "cloud_outsourcing"
+  },
+  {
+    "regulation_id": "sbs-res-3330-2019",
+    "country_code": "PE",
+    "article_ref": "art-7",
+    "title": "Requisitos contractuales",
+    "content": "Los contratos de servicios en la nube deben incluir: I - la ubicación geográfica de los centros de datos; II - los niveles de servicio (SLA) acordados; III - cláusulas de confidencialidad y protección de datos; IV - derecho de auditoría para la empresa y la SBS; V - plan de salida y migración de datos; VI - procedimientos de notificación de incidentes.",
+    "topic": "cloud_outsourcing"
+  },
+  {
+    "regulation_id": "sbs-res-3330-2019",
+    "country_code": "PE",
+    "article_ref": "art-10",
+    "title": "Comunicación previa a la SBS",
+    "content": "Las empresas deben comunicar a la SBS, con una anticipación no menor de treinta (30) días calendario, la contratación de servicios de computación en la nube para procesos significativos o que involucren información sensible de clientes, indicando el proveedor seleccionado, los servicios contratados y la ubicación de los datos.",
+    "topic": "regulatory_notification"
+  }
+]

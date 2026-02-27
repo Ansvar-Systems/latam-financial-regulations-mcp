@@ -1,0 +1,362 @@
+[
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "sector": "banking",
+    "requirement": "As instituições financeiras devem implementar e manter política de segurança cibernética aprovada pelo conselho de administração, compatível com o porte e perfil de risco da instituição, revisada anualmente.",
+    "legal_basis": "Resolução CMN 4.893/2021, Art. 2-3",
+    "category": "information_security_policy"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "sector": "banking",
+    "requirement": "Implementar controles de acesso lógico e físico que garantam a segregação de funções e o princípio do menor privilégio, incluindo autenticação multifator para sistemas críticos e acesso remoto.",
+    "legal_basis": "Resolução CMN 4.893/2021, Art. 3(II)",
+    "category": "access_control"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "sector": "banking",
+    "requirement": "Estabelecer plano de ação e de resposta a incidentes com procedimentos de detecção, contenção, erradicação e recuperação, incluindo comunicação ao BCB de incidentes relevantes em até 10 dias úteis.",
+    "legal_basis": "Resolução CMN 4.893/2021, Art. 6-7",
+    "category": "incident_response"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "sector": "banking",
+    "requirement": "Implementar programa de gestão de vulnerabilidades que inclua varreduras periódicas, análise de riscos e correção oportuna das vulnerabilidades identificadas em sistemas e aplicações.",
+    "legal_basis": "Resolução CMN 4.893/2021, Art. 3(II)",
+    "category": "vulnerability_management"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "sector": "banking",
+    "requirement": "Utilizar mecanismos de cifração para proteção de dados sensíveis em trânsito e em repouso, empregando algoritmos e protocolos criptográficos reconhecidos por padrões internacionais.",
+    "legal_basis": "Resolução CMN 4.893/2021, Art. 3(III)",
+    "category": "data_encryption"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "sector": "banking",
+    "requirement": "Assegurar a divulgação ampla da política de segurança cibernética a funcionários, prestadores de serviço e parceiros, mediante programa de capacitação e avaliação periódica de pessoal.",
+    "legal_basis": "Resolução CMN 4.893/2021, Art. 12",
+    "category": "security_awareness"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "BACEN",
+    "sector": "banking",
+    "requirement": "Realizar avaliação de segurança de terceiros que processem ou armazenem dados, incluindo provedores de nuvem, com comunicação prévia ao BCB de contratações relevantes e cláusulas contratuais de segurança.",
+    "legal_basis": "Resolução BCB 85/2021, Art. 3-5",
+    "category": "third_party_assessment"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "CVM",
+    "sector": "securities",
+    "requirement": "Os participantes do mercado de valores mobiliários devem implementar política de segurança cibernética e comunicar à CVM incidentes relevantes no prazo de cinco dias úteis.",
+    "legal_basis": "Resolução CVM 35/2021, Art. 3, 7",
+    "category": "information_security_policy"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "CVM",
+    "sector": "securities",
+    "requirement": "Os intermediários devem manter controles internos e gestão de risco operacional, incluindo segurança dos sistemas com controles de acesso lógico e físico, gestão de vulnerabilidades e testes periódicos de segurança.",
+    "legal_basis": "Instrução CVM 505/2011, Art. 35-37",
+    "category": "access_control"
+  },
+  {
+    "country_code": "BR",
+    "regulator_id": "SUSEP",
+    "sector": "insurance",
+    "requirement": "Sociedades seguradoras devem implementar política de segurança cibernética e plano de resposta a incidentes, com comunicação à SUSEP de incidentes relevantes em até cinco dias úteis.",
+    "legal_basis": "Circular SUSEP 638/2021, Art. 3, 6, 8",
+    "category": "incident_response"
+  },
+  {
+    "country_code": "CL",
+    "regulator_id": "CMF",
+    "sector": "banking",
+    "requirement": "Las entidades fiscalizadas deben contar con una política de seguridad de la información aprobada por el directorio que contemple clasificación de información, controles de acceso, gestión de vulnerabilidades y respuesta a incidentes.",
+    "legal_basis": "NCG 311, Art. 3",
+    "category": "information_security_policy"
+  },
+  {
+    "country_code": "CL",
+    "regulator_id": "CMF",
+    "sector": "banking",
+    "requirement": "Implementar controles de acceso a los sistemas y datos, incluyendo gestión de identidades, autenticación multifactor para sistemas críticos y revisión periódica de permisos de acceso.",
+    "legal_basis": "NCG 311, Art. 3(II)",
+    "category": "access_control"
+  },
+  {
+    "country_code": "CL",
+    "regulator_id": "CMF",
+    "sector": "banking",
+    "requirement": "Informar a la CMF, dentro de las 24 horas siguientes a la detección, todo incidente de ciberseguridad que pueda afectar la continuidad operacional, la integridad de los datos o la seguridad de los clientes.",
+    "legal_basis": "NCG 311, Art. 8",
+    "category": "incident_response"
+  },
+  {
+    "country_code": "CL",
+    "regulator_id": "CMF",
+    "sector": "banking",
+    "requirement": "Realizar evaluaciones periódicas de amenazas y vulnerabilidades, incluyendo pruebas de penetración y monitoreo continuo de eventos de seguridad.",
+    "legal_basis": "NCG 311, Art. 5",
+    "category": "vulnerability_management"
+  },
+  {
+    "country_code": "CL",
+    "regulator_id": "CMF",
+    "sector": "banking",
+    "requirement": "Implementar mecanismos de cifrado para la protección de datos sensibles, tanto en tránsito como en reposo, utilizando algoritmos reconocidos por estándares internacionales.",
+    "legal_basis": "NCG 311, Art. 12",
+    "category": "data_encryption"
+  },
+  {
+    "country_code": "CL",
+    "regulator_id": "CMF",
+    "sector": "banking",
+    "requirement": "Capacitar al personal en materia de seguridad de la información, incluyendo concientización sobre amenazas de ciberseguridad vigentes.",
+    "legal_basis": "NCG 311, Art. 3(V)",
+    "category": "security_awareness"
+  },
+  {
+    "country_code": "CL",
+    "regulator_id": "CMF",
+    "sector": "banking",
+    "requirement": "Establecer procedimientos para la gestión de riesgos de terceros, incluyendo evaluación previa de proveedores tecnológicos, cláusulas contractuales de seguridad y derecho de auditoría.",
+    "legal_basis": "NCG 311, Art. 10",
+    "category": "third_party_assessment"
+  },
+  {
+    "country_code": "CO",
+    "regulator_id": "SFC",
+    "sector": "banking",
+    "requirement": "Las entidades vigiladas deben implementar un marco de gestión del riesgo de ciberseguridad que contemple identificación de activos, evaluación de amenazas, controles preventivos, detectivos y correctivos, y monitoreo continuo.",
+    "legal_basis": "Circular Externa 007/2018, Num. 4",
+    "category": "information_security_policy"
+  },
+  {
+    "country_code": "CO",
+    "regulator_id": "SFC",
+    "sector": "banking",
+    "requirement": "Implementar controles de acceso que incluyan autenticación multifactor para sistemas críticos, principio de mínimo privilegio, revisión periódica de permisos y monitoreo de accesos privilegiados.",
+    "legal_basis": "CBJ Cap. V, Art. 3",
+    "category": "access_control"
+  },
+  {
+    "country_code": "CO",
+    "regulator_id": "SFC",
+    "sector": "banking",
+    "requirement": "Reportar a la SFC los incidentes de ciberseguridad significativos dentro de las 24 horas siguientes a su detección, utilizando el formato establecido por la Superintendencia.",
+    "legal_basis": "Circular Externa 007/2018, Num. 6",
+    "category": "incident_response"
+  },
+  {
+    "country_code": "CO",
+    "regulator_id": "SFC",
+    "sector": "banking",
+    "requirement": "Implementar un programa de gestión de vulnerabilidades que incluya escaneo periódico, análisis y priorización, remediación oportuna y pruebas de penetración al menos anualmente por un tercero independiente.",
+    "legal_basis": "Circular Externa 007/2018, Num. 8",
+    "category": "vulnerability_management"
+  },
+  {
+    "country_code": "CO",
+    "regulator_id": "SFC",
+    "sector": "banking",
+    "requirement": "Implementar cifrado de datos personales y financieros en tránsito y en reposo, controles de acceso basados en roles y monitoreo de acceso a datos sensibles.",
+    "legal_basis": "CBJ Cap. V, Art. 5",
+    "category": "data_encryption"
+  },
+  {
+    "country_code": "CO",
+    "regulator_id": "SFC",
+    "sector": "banking",
+    "requirement": "Implementar programas de capacitación y concientización en ciberseguridad dirigidos a todos los empleados, incluyendo simulacros de phishing y evaluación periódica del nivel de concientización.",
+    "legal_basis": "Circular Externa 007/2018, Num. 10",
+    "category": "security_awareness"
+  },
+  {
+    "country_code": "CO",
+    "regulator_id": "SFC",
+    "sector": "banking",
+    "requirement": "Contar con una unidad especializada de gestión de riesgo de ciberseguridad con personal especializado que reporte directamente a la alta dirección.",
+    "legal_basis": "Circular Externa 007/2018, Num. 3",
+    "category": "third_party_assessment"
+  },
+  {
+    "country_code": "UY",
+    "regulator_id": "BCU",
+    "sector": "banking",
+    "requirement": "Las entidades supervisadas deben contar con un marco de gobierno de TI con estructura organizacional, políticas aprobadas por el directorio, comité de riesgo tecnológico y asignación presupuestaria adecuada.",
+    "legal_basis": "Circular 2.307, Art. 3",
+    "category": "information_security_policy"
+  },
+  {
+    "country_code": "UY",
+    "regulator_id": "BCU",
+    "sector": "banking",
+    "requirement": "Implementar controles de acceso lógico que incluyan perfiles basados en mínimo privilegio, autenticación multifactor para sistemas críticos, revisión periódica de permisos y baja inmediata de personal desvinculado.",
+    "legal_basis": "Circular 2.307, Art. 8",
+    "category": "access_control"
+  },
+  {
+    "country_code": "UY",
+    "regulator_id": "BCU",
+    "sector": "banking",
+    "requirement": "Establecer procedimientos de gestión de incidentes que incluyan detección, clasificación, contención, comunicación al BCU dentro de 48 horas de incidentes significativos y análisis post-incidente.",
+    "legal_basis": "Circular 2.307, Art. 12",
+    "category": "incident_response"
+  },
+  {
+    "country_code": "UY",
+    "regulator_id": "BCU",
+    "sector": "banking",
+    "requirement": "Implementar un proceso de gestión de riesgos de seguridad de la información que incluya identificación de activos, evaluación de amenazas y vulnerabilidades, y monitoreo continuo.",
+    "legal_basis": "Circular 2.307, Art. 5",
+    "category": "vulnerability_management"
+  },
+  {
+    "country_code": "UY",
+    "regulator_id": "BCU",
+    "sector": "banking",
+    "requirement": "Implementar mecanismos de cifrado para datos en tránsito (TLS 1.2 o superior) y en reposo para información confidencial, con gestión adecuada de claves criptográficas.",
+    "legal_basis": "RNRCSF-IT, Sec. 3",
+    "category": "data_encryption"
+  },
+  {
+    "country_code": "UY",
+    "regulator_id": "BCU",
+    "sector": "banking",
+    "requirement": "Adoptar políticas de seguridad informática alineadas con estándares internacionales reconocidos que aseguren confidencialidad, integridad y disponibilidad de la información.",
+    "legal_basis": "RNRCSF-IT, Sec. 1",
+    "category": "security_awareness"
+  },
+  {
+    "country_code": "UY",
+    "regulator_id": "BCU",
+    "sector": "banking",
+    "requirement": "La tercerización de servicios TI requiere evaluación previa de riesgos, formalización contractual con cláusulas de seguridad y auditoría, comunicación previa al BCU y monitoreo continuo del proveedor.",
+    "legal_basis": "Circular 2.307, Art. 15",
+    "category": "third_party_assessment"
+  },
+  {
+    "country_code": "MX",
+    "regulator_id": "CNBV",
+    "sector": "banking",
+    "requirement": "Las instituciones de crédito deben contar con una política de seguridad de la información aprobada por el consejo de administración que establezca lineamientos de clasificación, protección y gestión de riesgos de ciberseguridad.",
+    "legal_basis": "CUB Título V, Art. 310",
+    "category": "information_security_policy"
+  },
+  {
+    "country_code": "MX",
+    "regulator_id": "CNBV",
+    "sector": "banking",
+    "requirement": "Implementar controles de acceso con perfiles basados en funciones, autenticación de dos factores para sistemas críticos, registro y monitoreo de accesos y revisión trimestral de permisos.",
+    "legal_basis": "CUB Título V, Art. 312",
+    "category": "access_control"
+  },
+  {
+    "country_code": "MX",
+    "regulator_id": "CNBV",
+    "sector": "banking",
+    "requirement": "Notificar a la CNBV los incidentes de seguridad relevantes dentro de las 24 horas siguientes a su detección, incluyendo naturaleza, impacto, medidas de contención y plan de remediación.",
+    "legal_basis": "CUB Título V, Art. 316",
+    "category": "incident_response"
+  },
+  {
+    "country_code": "MX",
+    "regulator_id": "CNBV",
+    "sector": "banking",
+    "requirement": "Realizar análisis de vulnerabilidades al menos trimestralmente, pruebas de penetración anuales por tercero independiente, evaluación de seguridad de aplicaciones previo a producción y simulacros semestrales.",
+    "legal_basis": "CUB Título V, Art. 320",
+    "category": "vulnerability_management"
+  },
+  {
+    "country_code": "MX",
+    "regulator_id": "CNBV",
+    "sector": "banking",
+    "requirement": "Implementar cifrado para la protección de información sensible de clientes y de la institución, tanto en almacenamiento como en transmisión, conforme a estándares internacionales vigentes.",
+    "legal_basis": "CUB Título V, Art. 318",
+    "category": "data_encryption"
+  },
+  {
+    "country_code": "MX",
+    "regulator_id": "CNBV",
+    "sector": "banking",
+    "requirement": "Implementar un programa de concientización en seguridad de la información para todo el personal, incluyendo capacitación inicial, periódica, simulacros de ingeniería social y evaluación del conocimiento.",
+    "legal_basis": "Disposiciones de seguridad, Art. 8",
+    "category": "security_awareness"
+  },
+  {
+    "country_code": "MX",
+    "regulator_id": "CNBV",
+    "sector": "banking",
+    "requirement": "Designar un oficial de seguridad de la información (CISO) que reporte a la alta dirección, responsable de coordinar la política de seguridad, gestionar incidentes y supervisar evaluaciones de riesgos.",
+    "legal_basis": "Disposiciones de seguridad, Art. 5",
+    "category": "third_party_assessment"
+  },
+  {
+    "country_code": "PE",
+    "regulator_id": "SBS",
+    "sector": "banking",
+    "requirement": "Las empresas supervisadas deben implementar un SGSI alineado con estándares internacionales que contemple política de seguridad, gestión de activos, control de accesos, gestión de incidentes y continuidad.",
+    "legal_basis": "Resolución SBS 504-2021, Art. 4",
+    "category": "information_security_policy"
+  },
+  {
+    "country_code": "PE",
+    "regulator_id": "SBS",
+    "sector": "banking",
+    "requirement": "Implementar controles de acceso basados en roles y principio de mínimo privilegio, autenticación multifactor para sistemas críticos y revisión periódica de permisos de acceso.",
+    "legal_basis": "Resolución SBS 504-2021, Art. 4(IV)",
+    "category": "access_control"
+  },
+  {
+    "country_code": "PE",
+    "regulator_id": "SBS",
+    "sector": "banking",
+    "requirement": "Reportar a la SBS los incidentes de ciberseguridad significativos dentro de las 24 horas desde su detección, incluyendo descripción, clasificación, impacto y acciones de contención.",
+    "legal_basis": "Resolución SBS 504-2021, Art. 12",
+    "category": "incident_response"
+  },
+  {
+    "country_code": "PE",
+    "regulator_id": "SBS",
+    "sector": "banking",
+    "requirement": "Contar con un programa de gestión de vulnerabilidades que incluya escaneo periódico, análisis de riesgos, remediación oportuna y pruebas de penetración al menos anualmente.",
+    "legal_basis": "Resolución SBS 504-2021, Art. 8",
+    "category": "vulnerability_management"
+  },
+  {
+    "country_code": "PE",
+    "regulator_id": "SBS",
+    "sector": "banking",
+    "requirement": "Implementar cifrado para información sensible y confidencial en almacenamiento y transmisión, utilizando algoritmos reconocidos internacionalmente y gestión de claves conforme a prácticas de la industria.",
+    "legal_basis": "Resolución SBS 504-2021, Art. 15",
+    "category": "data_encryption"
+  },
+  {
+    "country_code": "PE",
+    "regulator_id": "SBS",
+    "sector": "banking",
+    "requirement": "Implementar programa de capacitación y concientización en seguridad para todo el personal, incluyendo inducción, capacitación periódica sobre amenazas vigentes y simulacros de phishing.",
+    "legal_basis": "Resolución SBS 504-2021, Art. 18",
+    "category": "security_awareness"
+  },
+  {
+    "country_code": "PE",
+    "regulator_id": "SBS",
+    "sector": "banking",
+    "requirement": "Realizar evaluación previa de riesgos para contratación de servicios en la nube, con requisitos contractuales de seguridad, auditoría y comunicación previa a la SBS con 30 días de anticipación.",
+    "legal_basis": "Resolución SBS 3330-2019, Art. 4, 7, 10",
+    "category": "third_party_assessment"
+  }
+]

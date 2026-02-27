@@ -1,0 +1,66 @@
+[
+  {
+    "id": "BACEN",
+    "country_code": "BR",
+    "name": "BACEN",
+    "full_name": "Banco Central do Brasil",
+    "sector": "banking",
+    "website": "https://www.bcb.gov.br"
+  },
+  {
+    "id": "CVM",
+    "country_code": "BR",
+    "name": "CVM",
+    "full_name": "Comissão de Valores Mobiliários",
+    "sector": "securities",
+    "website": "https://www.cvm.gov.br"
+  },
+  {
+    "id": "SUSEP",
+    "country_code": "BR",
+    "name": "SUSEP",
+    "full_name": "Superintendência de Seguros Privados",
+    "sector": "insurance",
+    "website": "https://www.susep.gov.br"
+  },
+  {
+    "id": "CMF",
+    "country_code": "CL",
+    "name": "CMF",
+    "full_name": "Comisión para el Mercado Financiero",
+    "sector": "banking",
+    "website": "https://www.cmfchile.cl"
+  },
+  {
+    "id": "SFC",
+    "country_code": "CO",
+    "name": "SFC",
+    "full_name": "Superintendencia Financiera de Colombia",
+    "sector": "banking",
+    "website": "https://www.superfinanciera.gov.co"
+  },
+  {
+    "id": "BCU",
+    "country_code": "UY",
+    "name": "BCU",
+    "full_name": "Banco Central del Uruguay",
+    "sector": "banking",
+    "website": "https://www.bcu.gub.uy"
+  },
+  {
+    "id": "CNBV",
+    "country_code": "MX",
+    "name": "CNBV",
+    "full_name": "Comisión Nacional Bancaria y de Valores",
+    "sector": "banking",
+    "website": "https://www.cnbv.gob.mx"
+  },
+  {
+    "id": "SBS",
+    "country_code": "PE",
+    "name": "SBS",
+    "full_name": "Superintendencia de Banca, Seguros y AFP",
+    "sector": "banking",
+    "website": "https://www.sbs.gob.pe"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "country_code": "BR",
+    "framework_name": "Open Finance Brasil",
+    "description": "O Open Finance Brasil é o sistema financeiro aberto que permite o compartilhamento padronizado de dados e serviços entre instituições financeiras autorizadas pelo Banco Central. Abrange dados de cadastro, transações, produtos e serviços financeiros, pagamentos e seguros.",
+    "api_standards": "APIs RESTful com especificação OpenAPI 3.0; autenticação OAuth 2.0 e OpenID Connect (FAPI-BR); certificados digitais ICP-Brasil para mTLS; TLS 1.2 ou superior; limites de taxa (rate limiting) conforme especificação técnica da governança.",
+    "data_sharing_rules": "Consentimento eletrônico específico do cliente com finalidade, dados compartilhados e prazo definidos; prazo máximo de 12 meses por consentimento (renovável); revogação a qualquer momento; conformidade com a LGPD (Lei 13.709/2018); instituição receptora responsável pelo tratamento adequado dos dados.",
+    "legal_basis": "Resolução Conjunta nº 1/2020 (BCB/CVM); Resolução BCB 32/2020; Lei 12.865/2013 (arranjos de pagamento); Lei 13.709/2018 (LGPD)"
+  },
+  {
+    "country_code": "BR",
+    "framework_name": "Pix — Sistema de Pagamentos Instantâneos",
+    "description": "O Pix é o sistema de pagamento instantâneo do Brasil, operado pelo Banco Central, que permite transferências e pagamentos em tempo real, 24 horas por dia, 7 dias por semana. Integrado ao ecossistema de Open Finance para iniciação de pagamentos.",
+    "api_standards": "APIs do Pix conforme Manual de Segurança do Pix; comunicação via SPI (Sistema de Pagamentos Instantâneos) do BCB; criptografia ponta a ponta; autenticação forte do usuário final; mecanismos antifraude em tempo real.",
+    "data_sharing_rules": "Dados de transações Pix sujeitos ao sigilo bancário (Lei Complementar 105/2001); compartilhamento de dados de chaves Pix via DICT (Diretório de Identificadores de Contas Transacionais); Mecanismo Especial de Devolução (MED) para casos de fraude.",
+    "legal_basis": "Resolução BCB nº 1/2020 (Regulamento do Pix); Resolução BCB 147/2021; Lei 12.865/2013"
+  },
+  {
+    "country_code": "CL",
+    "framework_name": "Sistema de Finanzas Abiertas de Chile",
+    "description": "La Ley Fintech de Chile (Ley 21.521/2023) establece un sistema de finanzas abiertas que permite el intercambio de información financiera entre proveedores de servicios financieros, previo consentimiento del titular, mediante APIs estandarizadas bajo supervisión de la CMF.",
+    "api_standards": "APIs estandarizadas definidas por la CMF conforme normativa secundaria de la Ley 21.521; protocolos de seguridad conformes a estándares internacionales; autenticación robusta del cliente; cifrado de comunicaciones.",
+    "data_sharing_rules": "Consentimiento expreso del titular de los datos; definición clara de la finalidad del intercambio; derecho de revocación; protección conforme la normativa de protección de datos personales de Chile; supervisión de la CMF sobre los participantes del sistema.",
+    "legal_basis": "Ley 21.521/2023 (Ley Fintech), Art. 12 y siguientes; normativa secundaria de la CMF (en desarrollo)"
+  },
+  {
+    "country_code": "CO",
+    "framework_name": "Open Finance Colombia",
+    "description": "Colombia avanza hacia un marco de Open Finance liderado por la SFC y la Unidad de Regulación Financiera (URF). El Decreto 1357/2018 regula fintech y financiación colaborativa. La SFC ha emitido lineamientos para el intercambio de datos entre entidades financieras.",
+    "api_standards": "En desarrollo. La SFC ha establecido lineamientos para la interoperabilidad y seguridad de APIs; se espera la adopción de estándares técnicos basados en experiencias internacionales (Open Banking UK, Open Finance Brasil).",
+    "data_sharing_rules": "Consentimiento previo del cliente conforme Ley 1581/2012 (protección de datos personales); habeas data; interoperabilidad entre entidades vigiladas; supervisión de la SFC sobre la seguridad del intercambio de datos.",
+    "legal_basis": "Decreto 1357/2018; Ley 1581/2012; Circular Básica Jurídica de la SFC; lineamientos de la URF"
+  },
+  {
+    "country_code": "UY",
+    "framework_name": "Pagos Electrónicos y Modernización Financiera",
+    "description": "Uruguay ha avanzado en la modernización del sistema de pagos a través de la Ley de Inclusión Financiera (Ley 19.210/2014) y la regulación del BCU sobre medios de pago electrónicos. Si bien no cuenta con un marco formal de Open Banking, el BCU promueve la interoperabilidad entre entidades financieras.",
+    "api_standards": "Estándares técnicos definidos por el BCU para la interoperabilidad de medios de pago electrónicos; protocolos de seguridad conforme Circular 2.307; cifrado de comunicaciones y autenticación robusta.",
+    "data_sharing_rules": "Compartimiento de datos financieros sujeto a la Ley 18.331 (protección de datos personales) y normativa del BCU; consentimiento del titular; supervisión de la URCDP (Unidad Reguladora y de Control de Datos Personales).",
+    "legal_basis": "Ley 19.210/2014 (Inclusión Financiera); Circular BCU 2.307; Ley 18.331 (protección de datos personales)"
+  },
+  {
+    "country_code": "MX",
+    "framework_name": "Open Finance México (Ley Fintech)",
+    "description": "La Ley Fintech de México (LRITF, 2018) establece el marco para las instituciones de tecnología financiera y contempla disposiciones sobre el intercambio de datos financieros. La CNBV y el Banco de México regulan las APIs y los estándares técnicos para el intercambio de información.",
+    "api_standards": "APIs estandarizadas conforme disposiciones de la CNBV y el Banco de México; autenticación y autorización robustas; cifrado de datos en tránsito y reposo; registro de transacciones de intercambio de datos; monitoreo de seguridad.",
+    "data_sharing_rules": "Tres categorías de datos: datos agregados (acceso abierto), datos transaccionales (consentimiento del usuario), datos de clientes (consentimiento expreso); conformidad con la LFPDPPP para datos personales; supervisión del INAI y la CNBV.",
+    "legal_basis": "Ley para Regular las Instituciones de Tecnología Financiera (LRITF, 2018); disposiciones de la CNBV; Ley Federal de Protección de Datos Personales (LFPDPPP)"
+  },
+  {
+    "country_code": "PE",
+    "framework_name": "Regulación Fintech y Banca Digital",
+    "description": "Perú ha avanzado en la regulación fintech a través del Decreto de Urgencia 013-2020 que establece el marco para plataformas de financiamiento participativo. La SBS regula los servicios financieros digitales y la contratación de servicios en la nube.",
+    "api_standards": "Estándares técnicos en desarrollo conforme la normativa de la SBS; requisitos de seguridad para plataformas digitales conforme Resolución SBS 504-2021; protocolos de cifrado y autenticación para servicios financieros digitales.",
+    "data_sharing_rules": "Intercambio de datos financieros sujeto a la Ley 29733 (Ley de Protección de Datos Personales) y normativa de la SBS; consentimiento previo del titular; supervisión de la Autoridad Nacional de Protección de Datos Personales.",
+    "legal_basis": "Decreto de Urgencia 013-2020; Resolución SBS 504-2021; Resolución SBS 3330-2019; Ley 29733 (protección de datos personales)"
+  }
+]
